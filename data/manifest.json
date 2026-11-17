@@ -1,8 +1,8 @@
 {
   "archive": "processed.zip",
-  "archive_sha256": "5ebc332f90958600d07c101ff04414d0b422e3815f7ff9f3a3b4f428f69ebd45",
-  "n_files": 98,
-  "description": "Minimal processed inputs, held-out predictions, fold/threshold/model audit records, figure inputs and original-source provenance. Metrics and plots are regenerated; no raw expression matrices. The fitted RF artifact is stored separately.",
+  "archive_sha256": "89c07e832914cb34d2fa0ab472ad9379ad4b721c8199cd392e60963d6493a26b",
+  "n_files": 191,
+  "description": "Compact source-attributed inputs, held-out predictions, fold parameters and fixed direct same-cell physical/function analyses; no raw expression matrices or static figures.",
   "files": [
     {
       "path": "classifier/cohort_counts.csv",
@@ -40,6 +40,11 @@
       "sha256": "b409203414c4674c9d87dc63ac15bb775eb3a7ef47b4e7f82f61e09c2ad42132"
     },
     {
+      "path": "classifier/held_cell_line_uncertainty.csv",
+      "bytes": 1015,
+      "sha256": "61c72bc971d76bbfb31ffbce17409ae4f522916233395288111a406a122ace64"
+    },
+    {
       "path": "classifier/leave_task_out_fold_membership.csv.gz",
       "bytes": 234803,
       "sha256": "e9cc302234eadc7cbde2a70860be99291a9c30efb2d8526901fa5096ff41c59c"
@@ -70,9 +75,29 @@
       "sha256": "eca05c386f967b4c1c92699360e567d79472f3fbefcd3456f8010b6d656e4744"
     },
     {
+      "path": "direct_damage/H2AFX_scored_cells.csv.gz",
+      "bytes": 58204,
+      "sha256": "2ed4ceb7e4667aaae81c5a4b471cdaca0c2e6b01e46882439102765ad45a1768"
+    },
+    {
+      "path": "direct_damage/H2AFX_shared_gene_definitions.json",
+      "bytes": 925,
+      "sha256": "1e51bc7ef4647287e0d9af096e340b17b94b3cc8ea74baafa820afce50733e2d"
+    },
+    {
+      "path": "direct_damage/H2AFX_shared_gene_sensitivity.csv",
+      "bytes": 1180,
+      "sha256": "a19104956be3d7f000698a7d911341bb7eae8843b83062b9f0ce88a54ec22fb7"
+    },
+    {
       "path": "direct_damage/README.txt",
       "bytes": 4208,
       "sha256": "37206ba91bfff4ddcd80dd8b46ed070d6f388eea9726fd3ea789acb443306908"
+    },
+    {
+      "path": "direct_damage/all_cell_QC.csv.gz",
+      "bytes": 7642,
+      "sha256": "bd96ca0383f64239e82f89a84a294f9f4b62b69a0fdc12d9b8d622d5190a2164"
     },
     {
       "path": "direct_damage/all_scored_cells.csv.gz",
@@ -90,9 +115,24 @@
       "sha256": "e15482b7fb5c49179aa6d8237b639bfd88c935fd2050afdb7904f39163236999"
     },
     {
+      "path": "direct_damage/condition_association_summary.csv",
+      "bytes": 2954,
+      "sha256": "f27861542993ab59c74430f1c376b0b2a420747fe1713da0d767ed4db48862eb"
+    },
+    {
+      "path": "direct_damage/gene_identity_records.json",
+      "bytes": 18509,
+      "sha256": "2125dd2fd5d2e24800f5ec587dc0538ceae9344e3543ca211be590404f2832f7"
+    },
+    {
       "path": "direct_damage/gene_sets.json",
       "bytes": 4368,
       "sha256": "b8030b5039b478e4acfd1ee0fe9ff7844409f029592282c9e4cd9214297157fe"
+    },
+    {
+      "path": "direct_damage/plate_counts.csv",
+      "bytes": 270,
+      "sha256": "732198c2e310e765569bf59866c4aa277cd1e7a4452ec58f06797b4669e34902"
     },
     {
       "path": "direct_damage/prespecified_analysis.json",
@@ -108,6 +148,11 @@
       "path": "direct_damage/related_pilot_metadata_audit.csv",
       "bytes": 372,
       "sha256": "be8ed8d566702dde9933e120239aecd1f4d8cc51f11b80d4d3512e772fd78233"
+    },
+    {
+      "path": "direct_damage/scored_cells.csv.gz",
+      "bytes": 232992,
+      "sha256": "adbed372f0f85fd49efa60ed707db1778f5e4a7dc4f6dda390494a542381da3b"
     },
     {
       "path": "direct_damage/source_facts.json",
@@ -130,9 +175,139 @@
       "sha256": "9280120eaaab5e3e11fd3ebb8e6d6afba8319c7062b1e32eed2d242d647219f1"
     },
     {
+      "path": "direct_damage/vehicle_score_references.csv",
+      "bytes": 673,
+      "sha256": "e173e5e75d8083059d11cfd30acdb76d93c3362c8ac0dbcccbd1c320840ecbf4"
+    },
+    {
+      "path": "direct_damage/within_plate_DDR_label_associations.csv",
+      "bytes": 1583,
+      "sha256": "075e129f80afbc3a3802d4bfeaa7a543e5771882143977273a74ca8595c0499b"
+    },
+    {
+      "path": "direct_damage/within_plate_associations.csv",
+      "bytes": 3628,
+      "sha256": "f6b5e4433cb146ea3acb88dda62dac86f6c9560ab8e05a35663f6983823658e7"
+    },
+    {
+      "path": "direct_damage/within_plate_conditional_intervals.csv",
+      "bytes": 4088,
+      "sha256": "e5a5b58f3cb361273ac4d003eaff2b2cb0ae475fef1b64b3471423c768a08c89"
+    },
+    {
+      "path": "direct_lesions/README.md",
+      "bytes": 1775,
+      "sha256": "f903e5f4bec645ebbd82b4d0dd0397d592db6dadc046294d3c04555ed9f742bd"
+    },
+    {
+      "path": "direct_lesions/capture_library_associations.csv",
+      "bytes": 15877,
+      "sha256": "0f5743f59cf7157fbc0fefc0010999392c39f3721972af029f45804df390a2ce"
+    },
+    {
+      "path": "direct_lesions/condition_associations.csv",
+      "bytes": 2727,
+      "sha256": "8cd4945a305e07b7096e4bcc902ab07b36e79e6cdc3cbdc411b7360ecd9c8e6d"
+    },
+    {
+      "path": "direct_lesions/condition_summaries.csv",
+      "bytes": 802,
+      "sha256": "f5599e42490b0916d0a34c2f48e22e7082284b123b74866167b106ba37dedcf3"
+    },
+    {
+      "path": "direct_lesions/equal_cell_depth_sensitivity.csv",
+      "bytes": 37025,
+      "sha256": "10aac84def4fe8ab14054a5aabe85f03908ebf8c04a2e0d9508ca267c07aece5"
+    },
+    {
+      "path": "direct_lesions/equal_cell_depth_summary.csv",
+      "bytes": 1024,
+      "sha256": "0a148c6cfffc1d28d32925cc9e4cca052a206307d5f0142b1452d0e9bf522acf"
+    },
+    {
+      "path": "direct_lesions/fixed_component_associations.csv",
+      "bytes": 3036,
+      "sha256": "0299360a93705a766ad75950986b4bc402011943006850e4448ddc97297ab6e8"
+    },
+    {
+      "path": "direct_lesions/fixed_control_label_contrasts.csv",
+      "bytes": 878,
+      "sha256": "0b053e9e2d15cdbf5d9c3a0b1fd189a5ac915552b46069b775ffffc59e9f9af3"
+    },
+    {
+      "path": "direct_lesions/fixed_damage_regions.bed.gz",
+      "bytes": 308992,
+      "sha256": "b672b37d7109d3d996d14af279e938c73b182620a594a7abf7c52f0f59945f75"
+    },
+    {
+      "path": "direct_lesions/gene_coverage.csv",
+      "bytes": 1636,
+      "sha256": "9121d4bceec0c66cfa2dd41cbdb8de038f8b39a9216940be5553f0b9256ffa2d"
+    },
+    {
+      "path": "direct_lesions/gene_identity_records.json",
+      "bytes": 18509,
+      "sha256": "2125dd2fd5d2e24800f5ec587dc0538ceae9344e3543ca211be590404f2832f7"
+    },
+    {
+      "path": "direct_lesions/input_manifest.json",
+      "bytes": 841,
+      "sha256": "f11567cb846441c5671e4a6ac65ecec01001bec0bdc21b67fc3d8428d80b46ea"
+    },
+    {
+      "path": "direct_lesions/paired_cells.csv.gz",
+      "bytes": 6133429,
+      "sha256": "2c889b474eee51cf94d8c3d9e279b59b1ce6e926494b1a47152a1588158024e1"
+    },
+    {
+      "path": "direct_lesions/quartile_pseudobulk.csv",
+      "bytes": 72861,
+      "sha256": "620ff4015218ee68598c6dc28da4c9fa01ae78d9365e8ccadaecd7a07c27ee6a"
+    },
+    {
+      "path": "direct_lesions/quartile_read_depths.csv",
+      "bytes": 78247,
+      "sha256": "a644941eb5461aedb376e5959a643d39e1c26ab731c2ef4429ae40bed59f088b"
+    },
+    {
+      "path": "direct_lesions/read_matched_pseudobulk.csv",
+      "bytes": 47868,
+      "sha256": "88daed2b98902d07800b6f59e3093b315f9a3102a99768a54418a9e2efeb88fa"
+    },
+    {
+      "path": "direct_lesions/read_matched_summary.csv",
+      "bytes": 923,
+      "sha256": "14a1ae2ce869c0e66df3525beeca2006747162fa795bcaff2039515e4b5d0683"
+    },
+    {
+      "path": "direct_lesions/rna_score_definitions.json",
+      "bytes": 738,
+      "sha256": "42bad5f7110a65f259dcfc9c9409b9af2be4c5f3b12072da64f236723528b6c4"
+    },
+    {
+      "path": "direct_lesions/source_facts.json",
+      "bytes": 3227,
+      "sha256": "80274b74dd783ba798ecf8d0b5ba7c561099021106aaab41a733668983febdad"
+    },
+    {
       "path": "direct_repair/README.txt",
-      "bytes": 6858,
-      "sha256": "8c0b4b1166d35240bcd1b729891886a73e84b9925dbbf4304cf1cf24e579aba3"
+      "bytes": 6876,
+      "sha256": "536b5cd3f3791a759d151a6de9b93d1a834edc029d59cdc16a7447969204bd90"
+    },
+    {
+      "path": "direct_repair/analysis_plan.txt",
+      "bytes": 3993,
+      "sha256": "4b40832f2541e4f0e0c44f5f48204c7e0f2fd8c340e40592adb7a44204a66d62"
+    },
+    {
+      "path": "direct_repair/cell_annotation_map.csv.gz",
+      "bytes": 192395,
+      "sha256": "d454237ceb20978f86a29c421427d1c6d4ed8f9d9cadf08de7b877af2abdbdda"
+    },
+    {
+      "path": "direct_repair/cohort_counts.csv",
+      "bytes": 1554,
+      "sha256": "8dadc4aa86cb42ca05ca85321e072f3fc2a82218b00c85872cb15d625763799d"
     },
     {
       "path": "direct_repair/endpoint_definitions.csv",
@@ -146,13 +321,13 @@
     },
     {
       "path": "direct_repair/gene_coverage.csv",
-      "bytes": 5447,
-      "sha256": "3696ad1b9691ec11dda1cfc7d29b9b0c80b381a5bebcb2222d250d63ea6fbfb4"
+      "bytes": 5439,
+      "sha256": "4b6b4c57ca3e34631811f66809ce52f35b52258e7f3dcf5c924999381981531d"
     },
     {
       "path": "direct_repair/gene_sets.json",
-      "bytes": 1387,
-      "sha256": "02ea34ba9e7fd5e8940076e91daa8ace37b7ad8c1221b7f936bf350050c3a4f5"
+      "bytes": 1385,
+      "sha256": "b76c62d0a2aa330f2fba1aa02313c113e846ac2bea8f73f2781b05b3eb14cc36"
     },
     {
       "path": "direct_repair/input_checksums.json",
@@ -161,13 +336,28 @@
     },
     {
       "path": "direct_repair/paired_cells.csv.gz",
-      "bytes": 3210474,
-      "sha256": "daaabe08e3683f3890e69627c59655b0100249714a54cfb7d65966ef911fb02a"
+      "bytes": 3210593,
+      "sha256": "807b9f17100aae599edddf7fd6a5a55ee9e7f2bc59125d426d2583d3509a52ad"
+    },
+    {
+      "path": "direct_repair/pooled_diagnostics.csv",
+      "bytes": 993,
+      "sha256": "04135c1f189db86034bc181a406519ceb77568c5a2c95c19b1e80bf4c00fe91a"
     },
     {
       "path": "direct_repair/primary_results.csv",
       "bytes": 2731,
       "sha256": "2fd0a6e7586b327d8b42dcbe66cde37f36e3342c45cf979eec569a8843c41a18"
+    },
+    {
+      "path": "direct_repair/repair_associations.csv",
+      "bytes": 44018,
+      "sha256": "a8d3c98f422f236a06b7efee704f5377589f5506d5c63aef3dee41311354c686"
+    },
+    {
+      "path": "direct_repair/secondary_signature_results.csv",
+      "bytes": 6147,
+      "sha256": "b8faa7e06a54e17ddbe626622bdaee29b09694d44996daa0f691afd9d0dab617"
     },
     {
       "path": "direct_repair/software_versions.json",
@@ -183,6 +373,11 @@
       "path": "direct_repair/source_manifest.json",
       "bytes": 1479,
       "sha256": "cfd41a542a6ba6c336c5241075e276ce9e3eff1d786b3667f953b0c6266d793f"
+    },
+    {
+      "path": "direct_repair/within_line_correlations.csv",
+      "bytes": 175631,
+      "sha256": "a7269c82b5cd1685c999744ac64384eeed4e51706c550443a0448a0559c2ffe0"
     },
     {
       "path": "external/analysis_definitions.json",
@@ -365,6 +560,276 @@
       "sha256": "5fd3cb655d869589eea9e756d5762239a203ef37d55d9f17a50f0768d036f933"
     },
     {
+      "path": "model_extension/CCLE2019_TP53_variants.csv.gz",
+      "bytes": 1525,
+      "sha256": "2a157db0cba98cd0ae018809ee4a280344445d3780c1a42f0eb309175c37e94a"
+    },
+    {
+      "path": "model_extension/CCLE2019_classification_plan.json",
+      "bytes": 749,
+      "sha256": "bccf7e080892880815d7e12b7a7f5a1d26de9a86ba1105135b08bc50388f7447"
+    },
+    {
+      "path": "model_extension/CCLE2019_profiled_samples.csv",
+      "bytes": 4684,
+      "sha256": "592422c1b1101947448dcbad98e84b262b7e06e247168f382140fd5aa5095575"
+    },
+    {
+      "path": "model_extension/CCLE2019_source_manifest.json",
+      "bytes": 1058,
+      "sha256": "5fe7b0ca4b9426b9602a7bf28ce8fdef987fec9efa66f0ae1f0dc99c03a8fb69"
+    },
+    {
+      "path": "model_extension/README.txt",
+      "bytes": 8937,
+      "sha256": "f1534792c958603aa7a8e80156f40b21c09b41b07de819b3270a6f551d3539a8"
+    },
+    {
+      "path": "model_extension/TP53_annotation_concordance.csv",
+      "bytes": 1545,
+      "sha256": "1f32f9c6c4b5187c8f7e4d91bb4d1bcdc26734193daef0f9428dc888bb0d6aa6"
+    },
+    {
+      "path": "model_extension/TP53_literature_splice_curation.csv",
+      "bytes": 288,
+      "sha256": "0b480ebcd4d0ea9c071a6f676fac8b631d11c8cf15ab44a1476bf9325b93f23c"
+    },
+    {
+      "path": "model_extension/all_line_bootstrap.csv",
+      "bytes": 35316,
+      "sha256": "0f6132e8e0bd42ad07f993d8b4fa39f57a23894efbe37161fd94ec36b649ae65"
+    },
+    {
+      "path": "model_extension/all_performance.csv",
+      "bytes": 16219,
+      "sha256": "7c56668fb3ec93ed56c607111b64bf7ac9bea9f2c3ef5a3de831fc7b706bb4b8"
+    },
+    {
+      "path": "model_extension/cohort.csv",
+      "bytes": 15342,
+      "sha256": "a1a288bd9cd2706f99161f5141ee9923f58a34340b0228fcc219bd222d00d54f"
+    },
+    {
+      "path": "model_extension/curated_TP53_annotations.csv",
+      "bytes": 5579,
+      "sha256": "023302e087c35e44bd33b46c04cea93307ad5ffd6a267c5ab4723379387d362e"
+    },
+    {
+      "path": "model_extension/curated_TP53_coverage_by_regimen.csv",
+      "bytes": 291,
+      "sha256": "528e4c6dbbefb808d42de241cc00f79f0f0db1832970de89381c51c51dab612b"
+    },
+    {
+      "path": "model_extension/curated_all_outer_predictions.csv.gz",
+      "bytes": 70230,
+      "sha256": "8688566dfe8f17de256a7e3fcde67dd9a1cfb98532a9104f23275dca85788b12"
+    },
+    {
+      "path": "model_extension/curated_all_performance.csv",
+      "bytes": 27877,
+      "sha256": "665799d35cee6556cf5644d256814239fb305a1485eb372c1ba472a8cbb498b8"
+    },
+    {
+      "path": "model_extension/curated_biology_fitted_parameters.json.gz",
+      "bytes": 6423,
+      "sha256": "2510e4b1576222702cf2fa588772c1db670a65969a8e8eaa25879279a217c0b8"
+    },
+    {
+      "path": "model_extension/curated_biology_fold_references.json.gz",
+      "bytes": 8199,
+      "sha256": "3942293af26316fd2d8c3b82fd5744f46391a8f4ea98a6cf932b71489876c2bc"
+    },
+    {
+      "path": "model_extension/curated_biology_inner_tuning.csv",
+      "bytes": 4737,
+      "sha256": "5320e64971c31541b0ef2dd212909305abe1fc69117edfaf7241b87d232bea20"
+    },
+    {
+      "path": "model_extension/curated_biology_line_bootstrap.csv",
+      "bytes": 42521,
+      "sha256": "8344eaa4d9827adae8f50f36eb846db007da83503cb64d189e5662d9c0493ca6"
+    },
+    {
+      "path": "model_extension/curated_biology_selection_by_fold.csv",
+      "bytes": 899,
+      "sha256": "52e9cf844e75ca7442e5229ff1559d42e45a6e0d790800c75b83450746abff1d"
+    },
+    {
+      "path": "model_extension/curated_genotype_plan.json",
+      "bytes": 7069,
+      "sha256": "e713b149702517fe2a2f8bc089103091261d5a0b92dbd2036beb6b093e57df7e"
+    },
+    {
+      "path": "model_extension/extended_PRISM_associations.csv",
+      "bytes": 3090,
+      "sha256": "fb8e77b411fc162e2c61ab17257cbfd3784ebc5a086d70f2e367d4737f2556d2"
+    },
+    {
+      "path": "model_extension/extension_plan.json",
+      "bytes": 2613,
+      "sha256": "5f66495aab8ce499682e6ff891ee060b1e349f75ed81fcc0055903a9b8e37b44"
+    },
+    {
+      "path": "model_extension/feature_schema.json",
+      "bytes": 1315,
+      "sha256": "7e1fdf59b5cfabbf126e4c1da47bf93371656b4e8dcdf47ecc12ce5182209469"
+    },
+    {
+      "path": "model_extension/fitted_parameters.json.gz",
+      "bytes": 7473,
+      "sha256": "e63292f2bb650d2ba388b60cd9050a9414a8e0f98bd7d16fd376d73376a00c14"
+    },
+    {
+      "path": "model_extension/fold_references.json.gz",
+      "bytes": 6648,
+      "sha256": "07df2b91de9c4291472db08eef9069dc0b8fb163c0f60db4dc8725190471b746"
+    },
+    {
+      "path": "model_extension/idasanutlin_TP53_stratum_errors.csv",
+      "bytes": 4857,
+      "sha256": "8489ca6f18612a794cccaa307f8a4965eec6e5bf0fed47338dee51344e4db603"
+    },
+    {
+      "path": "model_extension/idasanutlin_extended_PRISM_by_TP53.csv",
+      "bytes": 1459,
+      "sha256": "c693dbe0e1ecfbe3a750b2b31554e6bfae2022fa15ae491bd3d19d4aab0b20de"
+    },
+    {
+      "path": "model_extension/idasanutlin_line_influence_sensitivity.csv",
+      "bytes": 1735,
+      "sha256": "ceff883c0342529834293358e48cd10cb1c4195d31af5f7f9004d5a9b5b6f820"
+    },
+    {
+      "path": "model_extension/inner_tuning.csv",
+      "bytes": 10791,
+      "sha256": "a751da525496e6d0491b2631f7509ca56a3b5c14113e8402a0f6f9d100c05564"
+    },
+    {
+      "path": "model_extension/line_residual_influence.csv",
+      "bytes": 5783,
+      "sha256": "a6e9ab65757a3076b624d5104b14e56dca34f52a1a9922f4a637a911656923f3"
+    },
+    {
+      "path": "model_extension/mechanistic_line_bootstrap.csv",
+      "bytes": 10208,
+      "sha256": "6a630e3535c96be3d793fc384ed0b47d8a7d2667b20d2d57c544b1344f6fc65e"
+    },
+    {
+      "path": "model_extension/pharmacology_control_scores.csv.gz",
+      "bytes": 159862,
+      "sha256": "8d521b6c758d4a84bd063e974f9f438b8ea459396c5aa2000769ed5514794a65"
+    },
+    {
+      "path": "model_extension/primary_model_count_strata.csv",
+      "bytes": 232,
+      "sha256": "05ebdd9b101f3995cd22e267adb5d3000ffedd757463960194bae200b4175244"
+    },
+    {
+      "path": "model_extension/primary_model_diagnostics.csv",
+      "bytes": 1012,
+      "sha256": "1c8b4e53f89ceb65154a86c39c3ccb5e58aca37859838c1bd6e2b6211e0fe483"
+    },
+    {
+      "path": "model_extension/primary_selection_counts.csv",
+      "bytes": 180,
+      "sha256": "5519ae67a301754e611aca3b92c97693f3518c8ee43e09c896ee181d4c811cda"
+    },
+    {
+      "path": "model_extension/prior_family_predictions.csv.gz",
+      "bytes": 44969,
+      "sha256": "a5cbed5f505974b7050c8badf1f84d6743813fef3315b04e8811bc2aac5dcdd1"
+    },
+    {
+      "path": "model_extension/sampling_noise_reference.csv",
+      "bytes": 828,
+      "sha256": "a6dcfbed11715fdc2a5b7662e9c5aa4ab566204f8a46bfab7226be65cea4dd85"
+    },
+    {
+      "path": "model_extension/selection_by_fold.csv",
+      "bytes": 338,
+      "sha256": "fca9abab856ec3dbeb3b865d9cc1651436a63ccdad5642024e318c311259496b"
+    },
+    {
+      "path": "model_extension/source_TP53_annotations.csv",
+      "bytes": 748,
+      "sha256": "a05a4a10cb82f585b9735ef0626b10a26dd57063614b079e519c7530db2b0d7a"
+    },
+    {
+      "path": "model_extension/transcriptome_fitted_parameters.json.gz",
+      "bytes": 1846326,
+      "sha256": "72e3dcd41fc595ffe7f25d8cc85590a5586d4e73f37aa197e3eed3a0bf133413"
+    },
+    {
+      "path": "model_extension/transcriptome_inner_tuning.csv",
+      "bytes": 16319,
+      "sha256": "0c7ecb4156b23223063929e8b40e2534505b7ad18c3b2e8b3e01108222049404"
+    },
+    {
+      "path": "model_extension/transcriptome_plan.json",
+      "bytes": 1979,
+      "sha256": "a0ad9c8bbdcd66fc0e6f854448d580dddfd1c94ed20f578cbd145aacb7e8ab2b"
+    },
+    {
+      "path": "model_extension/transcriptome_selection_by_fold.csv",
+      "bytes": 944,
+      "sha256": "d1ef737765a8340271c4acc56deebba59b71e3f6f6ee46d07471529bcea86fa8"
+    },
+    {
+      "path": "model_extension/uniform_TP53_annotations.csv",
+      "bytes": 4664,
+      "sha256": "541a490f3a26f187b29d526d0e5e01f4569b2ab3d5645727e05b13cfb90a183c"
+    },
+    {
+      "path": "model_extension/uniform_TP53_coverage_by_regimen.csv",
+      "bytes": 291,
+      "sha256": "6fede21aeb5ba91f09d3f16f1569e3fe17561e0cd8bf5a1cd5a833d1cdb93d20"
+    },
+    {
+      "path": "model_extension/uniform_all_outer_predictions.csv.gz",
+      "bytes": 70536,
+      "sha256": "121da41c7fee64de7161489dc198ebd0273cb0ac0aceb1a721b4deffdf1316c8"
+    },
+    {
+      "path": "model_extension/uniform_all_performance.csv",
+      "bytes": 27738,
+      "sha256": "1202e5b77787750eff91eaa93a8282d84bfb179f320c41155caf565c67f2ad7f"
+    },
+    {
+      "path": "model_extension/uniform_biology_fitted_parameters.json.gz",
+      "bytes": 6423,
+      "sha256": "63ca5af60f4099b89c511fd7a4a5b1a977ac4b02fef29f23979b3ae9ccdb2e52"
+    },
+    {
+      "path": "model_extension/uniform_biology_fold_references.json.gz",
+      "bytes": 8199,
+      "sha256": "6b8691d3bd28551ff3a21db88ba53c2a238c7f3a9d75d61d1e6c3a4c5cc7b925"
+    },
+    {
+      "path": "model_extension/uniform_biology_inner_tuning.csv",
+      "bytes": 4557,
+      "sha256": "d43a77c0cf9b350a9ddde0cf73bd143da4cac2621169b0bab8fd705eed1adab8"
+    },
+    {
+      "path": "model_extension/uniform_biology_line_bootstrap.csv",
+      "bytes": 41795,
+      "sha256": "bc6496bfb0af7e5944ad3a7b07a7597322ff60ec450a9ab0ab703c17797a8220"
+    },
+    {
+      "path": "model_extension/uniform_biology_selection_by_fold.csv",
+      "bytes": 865,
+      "sha256": "fb17dcda74be5586ae79da11b66298e1f39afb3b4787f9bc6401f5795d2d3673"
+    },
+    {
+      "path": "model_extension/uniform_genotype_plan.json",
+      "bytes": 5767,
+      "sha256": "67a192ed67a48dd27c5c389868c3ba4cc9a695ee260063058dcb338f04e65b92"
+    },
+    {
+      "path": "model_extension/within_drug_normalized_errors.csv",
+      "bytes": 567,
+      "sha256": "29f86556f603017572c40143c1ed403c10a3ac094c4e0cfc73ed01974e211532"
+    },
+    {
       "path": "source_context/Bortezomib_24hr_expt1_CL_features.csv",
       "bytes": 2944,
       "sha256": "d4ef039e90448b422073c54a07b464b01ac37d6d2b2876db30ca5b3a02e1788f"
@@ -491,8 +956,8 @@
     },
     {
       "path": "upstream_sources.json",
-      "bytes": 5251,
-      "sha256": "bec7b61dbab4c81c4253457534031ffac132cfacb03adf00e416e6443e8c50d2"
+      "bytes": 6227,
+      "sha256": "4334160c70f6f2bac56b08dc50901aaa7b0955c09289c8611c3baed3a841df76"
     }
   ],
   "model_artifact": {

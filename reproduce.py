@@ -77,9 +77,9 @@ def forecast_statistics(folder, bootstrap):
         main[main.model == "parsimonious_additive"].predicted.to_numpy(),
     )
     if abs(stats["r2"] - 0.505826051227275) > 1e-8:
-        raise ValueError("Primary published R2 did not reproduce")
+        raise ValueError("Original published R2 did not reproduce")
     if abs(stats["mae"] - 0.122645864999196) > 1e-8:
-        raise ValueError("Primary published MAE did not reproduce")
+        raise ValueError("Original published MAE did not reproduce")
     return stats
 
 
@@ -131,6 +131,12 @@ def classifier_statistics(folder):
         pd.DataFrame(tasks).to_csv(folder / f"{scheme}_task_metrics.csv", index=False)
         pd.DataFrame(folds).to_csv(folder / f"{scheme}_fold_metrics.csv", index=False)
     pd.DataFrame(pooled).to_csv(folder / "pooled_metrics.csv", index=False)
+    import figures
+    uncertainty = figures.classifier_ci(folder.parent, folder.parent, recompute=True)
+    frozen = pd.read_csv(folder / "held_cell_line_uncertainty.csv", float_precision="round_trip")
+    assert uncertainty.n_cell_lines.eq(93).all() and uncertainty.bootstrap_resamples.eq(1000).all()
+    pd.testing.assert_frame_equal(uncertainty, frozen, check_dtype=False, atol=1e-12, rtol=1e-12)
+    uncertainty.to_csv(folder / "held_cell_line_uncertainty.csv", index=False)
     return pooled
 
 
@@ -242,6 +248,10 @@ def download_direct(inputs, args):
     if args.data_root is None:
         raise ValueError("--download-direct requires --data-root")
     for kind in args.download_direct:
+        if kind == "lesions":
+            run("direct_lesions/reproduce_raw.py", "--records", inputs / "direct_lesions",
+                "--data-root", args.data_root / "datasets/direct_lesions", "--download")
+            continue
         records = json.loads(
             (inputs / f"direct_{kind}/source_manifest.json").read_text()
         )
@@ -312,6 +322,12 @@ def direct_statistics(inputs, results, args):
                 f"Direct {kind}: published primary table reproduced ({len(actual)} rows)",
                 flush=True,
             )
+            if kind == "repair":
+                for name in ["repair_associations.csv", "within_line_correlations.csv", "secondary_signature_results.csv"]:
+                    expected = pd.read_csv(folder / name, float_precision="round_trip")
+                    observed = pd.read_csv(results / "direct_repair" / name, float_precision="round_trip")
+                    pd.testing.assert_frame_equal(expected, observed, check_dtype=False,
+                        check_exact=False, atol=1e-12, rtol=1e-12)
 
 
 def raw_analysis(inputs, results, args):
@@ -432,7 +448,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--output", type=Path, default=ROOT / "results")
     p.add_argument("--bootstrap", type=int, default=4000)
-    p.add_argument("--refit", choices=["forecast", "classifier"])
+    p.add_argument("--refit", choices=["forecast", "classifier", "extension"])
     p.add_argument(
         "--all-analyses",
         action="store_true",
@@ -459,6 +475,8 @@ def main():
             "source-mapping",
             "damage",
             "repair",
+            "extension",
+            "lesions",
         ],
     )
     p.add_argument(
@@ -475,7 +493,7 @@ def main():
             "ReplogleWeissman2022_rpe1",
         ],
     )
-    p.add_argument("--download-direct", nargs="+", choices=["damage", "repair"])
+    p.add_argument("--download-direct", nargs="+", choices=["damage", "repair", "lesions"])
     p.add_argument("--no-figures", action="store_true")
     args = p.parse_args()
     out = args.output.resolve()
@@ -487,7 +505,16 @@ def main():
         download_inputs(inputs, args)
     if args.download_direct:
         download_direct(inputs, args)
-    if args.raw:
+    if args.raw == "extension":
+        if args.data_root is None:
+            p.error("--raw extension requires --data-root")
+    elif args.raw == "lesions":
+        if args.data_root is None:
+            p.error("--raw lesions requires --data-root")
+        run("direct_lesions/reproduce_raw.py", "--records", inputs / "direct_lesions",
+            "--data-root", args.data_root / "datasets/direct_lesions",
+            "--output", results / "direct_lesions")
+    elif args.raw:
         raw_analysis(inputs, results, args)
     if args.refit == "forecast":
         fit_forecast(inputs, results / "forecast", args)
@@ -516,10 +543,13 @@ def main():
             results / "forecast",
         )
     direct_statistics(inputs, results, args)
-    primary = forecast_statistics(results / "forecast", args.bootstrap)
+    original = forecast_statistics(results / "forecast", args.bootstrap)
+    from integrated_evidence import run_integrated
+    primary = run_integrated(inputs, results, METHODS, args)
     secondary = classifier_statistics(results / "classifier")
     summary = {
         "primary_forecast": primary,
+        "original_forecast": original,
         "classifier_pooled": secondary,
         "bootstrap_draws": args.bootstrap,
         "mode": (
@@ -530,11 +560,8 @@ def main():
     }
     (out / "reproduced_metrics.json").write_text(json.dumps(summary, indent=2) + "\n")
     if not args.no_figures:
-        run("figures.py", "--data", results, "--output", out / "figures")
-        if (METHODS / "direct_figure.py").exists():
-            run("direct_figure.py", "--data", results, "--output", out / "figures")
-        if (METHODS / "direct_figure.py").exists():
-            run("direct_figure.py", "--data", results, "--output", out / "figures")
+        run("figures.py", "--data", results, "--output", out / "figures",
+            "--only", "1", "2", "3", "4", "context", "imaging", "classifier")
     print(
         f"Verified primary R2={primary['r2']:.9f}; MAE={primary['mae']:.9f}. Outputs: {out}",
         flush=True,
