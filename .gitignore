@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+results/
+*_refit/
+*_raw/
+raw_data/
+*.h5ad
+*.joblib
+*.download
