@@ -8,4 +8,5 @@ results/
 raw_data/
 *.h5ad
 *.joblib
+!data/final_classifier.joblib
 *.download

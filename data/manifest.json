@@ -1,8 +1,8 @@
 {
   "archive": "processed.zip",
-  "archive_sha256": "9bf6ecdef2a749b503dc2a0ee6acaca27361af89c5970b81d78ad6401f5ec575",
-  "n_files": 103,
-  "description": "Minimal processed inputs, held-out predictions, fold/threshold/model audit records, figure inputs and original-source provenance. Metrics and plots are regenerated; no raw expression matrices or pretrained RF binary.",
+  "archive_sha256": "e01d03a2e4e9050fafaf6f8f1f0b5a7835c1de210e0a2bf8a3ad1f432977e762",
+  "n_files": 93,
+  "description": "Minimal processed inputs, held-out predictions, fold/threshold/model audit records, figure inputs and original-source provenance. Metrics and plots are regenerated; no raw expression matrices. The fitted RF artifact is stored separately.",
   "files": [
     {
       "path": "classifier/cohort_counts.csv",
@@ -66,18 +66,18 @@
     },
     {
       "path": "direct_damage/README.txt",
-      "bytes": 3460,
-      "sha256": "4a1caf1506126359b159e4f267db667734efae91dd49e6e950d6f181fd368b3c"
+      "bytes": 3550,
+      "sha256": "b98d49571a8e340509ba463335ca0b347ec8a0d38404d56ece7b10fc5de2e024"
     },
     {
       "path": "direct_damage/all_scored_cells.csv.gz",
-      "bytes": 355402,
-      "sha256": "ee70e1038fb238fdd8347e11e4c8058a01a301f1cace4afdef0850fd394c4f79"
+      "bytes": 351412,
+      "sha256": "e85a739071527c51dfefc77d62ed2d73c797ae39c4ebacbdc5b217f11104bcc7"
     },
     {
       "path": "direct_damage/checks_and_definitions.json",
-      "bytes": 1595,
-      "sha256": "a644d0e53586b1d52e44d7bfcda79553b4e51df9f41be6d75c9104470c88f8b9"
+      "bytes": 1938,
+      "sha256": "aa63de93f1d43bdafdd227340990edeb818e11d21f3f4bf512df6408c7b217a1"
     },
     {
       "path": "direct_damage/citation.bib",
@@ -85,29 +85,19 @@
       "sha256": "e15482b7fb5c49179aa6d8237b639bfd88c935fd2050afdb7904f39163236999"
     },
     {
-      "path": "direct_damage/condition_association_summary.csv",
-      "bytes": 2945,
-      "sha256": "2ac8197105d45cdfc30e68f5f991d9c144de1e497a5d86d9eb7563cd9c76596d"
-    },
-    {
       "path": "direct_damage/gene_sets.json",
       "bytes": 2830,
       "sha256": "d9b5db3449bde0d6bbb4a61ab7e67136ca389b8d7db5f316f46d5794f7911205"
     },
     {
-      "path": "direct_damage/plate_counts.csv",
-      "bytes": 270,
-      "sha256": "732198c2e310e765569bf59866c4aa277cd1e7a4452ec58f06797b4669e34902"
-    },
-    {
       "path": "direct_damage/prespecified_analysis.json",
-      "bytes": 1507,
-      "sha256": "dc477422d5952c11325e8565e56ae8da370aac4e448527e64436f3f1880c6675"
+      "bytes": 1898,
+      "sha256": "b10a60d498f6d10caff943924a316e0ed2f36af9a84c8fe003081c4e81f5b683"
     },
     {
       "path": "direct_damage/primary_plate_summary.csv",
-      "bytes": 917,
-      "sha256": "b441a02d7c1841fc8792c4371606ba3965d1298b7819f863bf12b4ccb86cf00c"
+      "bytes": 933,
+      "sha256": "89580fb7819b7011b7247916bf0965a1ec30689ab7474dd2252c755b0cc9c9a6"
     },
     {
       "path": "direct_damage/related_pilot_metadata_audit.csv",
@@ -116,13 +106,13 @@
     },
     {
       "path": "direct_damage/source_facts.json",
-      "bytes": 1802,
-      "sha256": "9756a59d312bd3114a8159e873bd11bdaacaf5974f0c19bc8e47d7765339c15c"
+      "bytes": 2079,
+      "sha256": "1e0b414499f7b97ed16b1940c5e95a5a6023b9e0ed4e51925a9190859fe5280a"
     },
     {
       "path": "direct_damage/source_gate_label_audit.csv",
-      "bytes": 4731,
-      "sha256": "873b528089682bd872ad4573bd49380735c25ac8340be13cf931d9bd999e377c"
+      "bytes": 4721,
+      "sha256": "8c3bd7cf20809f8ef0c4fac473bb8ea497ea57d903bbab8c04069cb70e7d44f6"
     },
     {
       "path": "direct_damage/source_manifest.json",
@@ -130,34 +120,9 @@
       "sha256": "9280120eaaab5e3e11fd3ebb8e6d6afba8319c7062b1e32eed2d242d647219f1"
     },
     {
-      "path": "direct_damage/vehicle_score_references.csv",
-      "bytes": 676,
-      "sha256": "96fd5a439f4a13874285b56b6ca0b13e559227c83c89d1a9bfed2e4bdb6fc558"
-    },
-    {
-      "path": "direct_damage/within_plate_DDR_label_associations.csv",
-      "bytes": 1613,
-      "sha256": "9fe8a7aa46c2032f7f2a45d9972333e833bd4a9e1d3315e4d0dcbee314b4a3fd"
-    },
-    {
-      "path": "direct_damage/within_plate_associations.csv",
-      "bytes": 3619,
-      "sha256": "86128ead03f297d02e6397ff797e171752086066df38ff51156b3a253b36119a"
-    },
-    {
-      "path": "direct_damage/within_plate_conditional_intervals.csv",
-      "bytes": 4086,
-      "sha256": "6463a35f7b2e84776c587d9d79ebc70796da154ff4e5ab577cc70f69a1396dd6"
-    },
-    {
       "path": "direct_repair/README.txt",
-      "bytes": 6752,
-      "sha256": "c15be1ba626eda9015a92d5b6d201f80fc1932a6b38200aed02fd498c0cacc8f"
-    },
-    {
-      "path": "direct_repair/cohort_counts.csv",
-      "bytes": 1554,
-      "sha256": "8dadc4aa86cb42ca05ca85321e072f3fc2a82218b00c85872cb15d625763799d"
+      "bytes": 6858,
+      "sha256": "8c0b4b1166d35240bcd1b729891886a73e84b9925dbbf4304cf1cf24e579aba3"
     },
     {
       "path": "direct_repair/endpoint_definitions.csv",
@@ -190,19 +155,9 @@
       "sha256": "daaabe08e3683f3890e69627c59655b0100249714a54cfb7d65966ef911fb02a"
     },
     {
-      "path": "direct_repair/pooled_diagnostics.csv",
-      "bytes": 993,
-      "sha256": "04135c1f189db86034bc181a406519ceb77568c5a2c95c19b1e80bf4c00fe91a"
-    },
-    {
       "path": "direct_repair/primary_results.csv",
       "bytes": 2731,
       "sha256": "2fd0a6e7586b327d8b42dcbe66cde37f36e3342c45cf979eec569a8843c41a18"
-    },
-    {
-      "path": "direct_repair/repair_associations.csv",
-      "bytes": 44022,
-      "sha256": "02acb6804988980ebdf0a32a94b4b7abea2418963a359d19f0108db83743db29"
     },
     {
       "path": "direct_repair/software_versions.json",
@@ -211,18 +166,13 @@
     },
     {
       "path": "direct_repair/source_info.json",
-      "bytes": 1097,
-      "sha256": "e23f25d0991ca323e0197c4d9d3fff74a0ab1648c64895eaf61ca3f054fd8b1a"
+      "bytes": 1393,
+      "sha256": "9d00a1bf24e593d6769b3eab92e5d7e265f533e4b3f8daba69f28940f895ae0b"
     },
     {
       "path": "direct_repair/source_manifest.json",
       "bytes": 1479,
       "sha256": "cfd41a542a6ba6c336c5241075e276ce9e3eff1d786b3667f953b0c6266d793f"
-    },
-    {
-      "path": "direct_repair/within_line_correlations.csv",
-      "bytes": 175616,
-      "sha256": "f47646cf4778ac307f9e9f19dd3d9ff5184824c393f8f1c24ebbe601485bb74f"
     },
     {
       "path": "external/analysis_definitions.json",
@@ -519,5 +469,12 @@
       "bytes": 5251,
       "sha256": "bec7b61dbab4c81c4253457534031ffac132cfacb03adf00e416e6443e8c50d2"
     }
-  ]
+  ],
+  "model_artifact": {
+    "path": "final_classifier.joblib",
+    "bytes": 12943955,
+    "sha256": "a8bada3c518b4b653d28ff0d99726ce433ecf9bdd791a338b92684455d22c3ac",
+    "format": "joblib; lossless lzma level3 recompression",
+    "purpose": "Full-eligible-data contemporaneous-state classifier, distinct from held-out predictions"
+  }
 }

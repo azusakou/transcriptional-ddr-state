@@ -4,7 +4,7 @@
 Replay: --input paired_cells.csv.gz --output DIRECTORY.
 Rebuild: --data-root DIRECTORY --annotations figure6a_scrna_umap_plot.csv
          --output DIRECTORY.
-Raw inputs are the two GEO10xcount H5s and two GEOH5ADs.
+Raw inputs are the two GEO 10x count H5s and two GEO H5ADs.
 """
 from __future__ import annotations
 import argparse, hashlib, itertools, json, platform

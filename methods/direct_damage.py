@@ -47,6 +47,17 @@ def main():
     )
     args = ap.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
+    pilot_file = args.source / "GSE256134_fresh_dsp_meta_data.tsv.gz"
+    if pilot_file.exists():
+        pilot = pd.read_csv(pilot_file, sep="\t", index_col=0)
+        pilot = pilot.loc[pilot.fresh_RAID.eq("RAID")]
+        pilot.groupby(["treatment", "yh2ax_level"], observed=True).agg(
+            n=("well", "size"),
+            Alexa647_median=("Alexa647_fluorescence", "median"),
+            Geminin_median=("Geminin_fluorescence", "median"),
+        ).reset_index().to_csv(
+            args.output / "related_pilot_metadata_audit.csv", index=False
+        )
     if args.input:
         meta = pd.read_csv(args.input, index_col=0)
         if not meta.index.is_unique:
@@ -93,7 +104,29 @@ def main():
         total_error = float(np.max(np.abs(totals - meta.nCount_RNA.to_numpy())))
         if not np.allclose(totals, meta.nCount_RNA, atol=1e-3, rtol=1e-8):
             raise ValueError("Source library sizes differ from matrix column sums")
-        endogenous = ~counts.index.str.startswith("ERCC")
+        detected_error = int(
+            np.sum((arr > 0).sum(axis=0) != meta.nFeature_RNA.to_numpy())
+        )
+        if detected_error:
+            raise ValueError("Source detected-gene counts differ from matrix")
+        # The deposit excludes ERCC spike-in rows. Source QC percentages used
+        # the original library including spike-ins; this identity checks that
+        # their mitochondrial and ERCC annotations are internally consistent.
+        mt_fraction = 100 * arr[counts.index.str.startswith("MT-")].sum(axis=0) / totals
+        mt_error = float(
+            np.max(
+                np.abs(
+                    mt_fraction * (1 - meta.percent_ERCC.to_numpy() / 100)
+                    - meta.percent_MT.to_numpy()
+                )
+            )
+        )
+        if mt_error > 1e-5:
+            raise ValueError(
+                "Source QC percentages inconsistent with expression matrix"
+            )
+        # ERCC1/2/etc. are human repair genes; only ERCC- identifies spike-ins.
+        endogenous = ~counts.index.str.startswith("ERCC-")
         total_endog = arr[endogenous].sum(axis=0)
         meta["endogenous_counts"] = total_endog
         meta["log_depth"] = np.log1p(total_endog)
@@ -126,6 +159,8 @@ def main():
             "n_noninteger_count_values": int(np.sum(np.abs(arr - np.rint(arr)) > 1e-7)),
             "n_nonzero_count_values": int(np.sum(arr > 0)),
             "max_abs_total_difference_vs_source": total_error,
+            "n_detected_gene_count_mismatches": detected_error,
+            "max_abs_MT_percentage_error_after_source_ERCC_denominator": mt_error,
             "n_ERCC_features_excluded_from_normalization": int((~endogenous).sum()),
             "n_qc_cells": int(meta.qc_pass.sum()),
             "n_treated_qc_cells": int((meta.qc_pass & (meta.treatment == "GP")).sum()),
@@ -140,6 +175,9 @@ def main():
             "replication": "Eight sorting plates; independent culture replication not established",
             "source_FUCCI_per_cell_available": False,
         }
+        checks["source_QC_denominator"] = (
+            "MTpercentage was computed in source full library including ERCC spikeins; matrix retains human genes only. MTpercentage_endogenous*(1-ERCCpercentage/100) reproduces source MTpercentage."
+        )
     meta.groupby(["experimentid", "hras", "treatment"], observed=True).agg(
         n_original=("qc_pass", "size"), n_qc=("qc_pass", "sum")
     ).reset_index().to_csv(args.output / "plate_counts.csv", index=False)

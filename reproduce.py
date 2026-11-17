@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Recompute published statistics/figures or refit the grouped models."""
 from __future__ import annotations
-import argparse, hashlib, json, os, shutil, subprocess, sys, urllib.request, zipfile
+import argparse, hashlib, json, os, shutil, subprocess, sys, tempfile, urllib.request, zipfile
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -9,6 +9,10 @@ ROOT = Path(__file__).resolve().parent
 METHODS = ROOT / "methods"
 sys.path.insert(0, str(METHODS))
 os.environ.setdefault("PYTHONDONTWRITEBYTECODE", "1")
+os.environ.setdefault("MPLBACKEND", "Agg")
+os.environ.setdefault(
+    "MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "ddr_matplotlib")
+)
 
 
 def digest(path):
@@ -24,6 +28,10 @@ def unpack(out):
     manifest = json.loads((ROOT / "data/manifest.json").read_text())
     if digest(archive) != manifest["archive_sha256"]:
         raise ValueError("Evidence archive checksum mismatch")
+    if "model_artifact" in manifest:
+        model = manifest["model_artifact"]
+        if digest(ROOT / "data" / model["path"]) != model["sha256"]:
+            raise ValueError("Fitted classifier artifact checksum mismatch")
     target = out / "inputs"
     target.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(archive) as z:
@@ -279,6 +287,30 @@ def direct_statistics(inputs, results, args):
                 folder / name,
                 "--output",
                 results / f"direct_{kind}",
+            )
+        if folder.exists():
+            import pandas as pd
+
+            primary = (
+                "primary_plate_summary.csv"
+                if kind == "damage"
+                else "primary_results.csv"
+            )
+            reference = pd.read_csv(folder / primary, float_precision="round_trip")
+            actual = pd.read_csv(
+                results / f"direct_{kind}" / primary, float_precision="round_trip"
+            )
+            pd.testing.assert_frame_equal(
+                reference,
+                actual,
+                check_dtype=False,
+                check_exact=False,
+                atol=1e-12,
+                rtol=1e-12,
+            )
+            print(
+                f"Direct {kind}: published primary table reproduced ({len(actual)} rows)",
+                flush=True,
             )
 
 

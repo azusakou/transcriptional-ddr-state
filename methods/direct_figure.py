@@ -81,7 +81,7 @@ def main():
            xlim=(-.18, .32), xlabel='Within-line partial rank correlation, equal-line Fisher-z mean')
     az.axvline(0, color=grey, lw=.65, ls='--')
     az.set_title('Same-cell DDR score and functional reporter readouts', loc='left', pad=12)
-    az.legend(loc='upper right', fontsize=6.5)
+    az.legend(loc='upper right', bbox_to_anchor=(1, .36), fontsize=6.5)
     az.text(0, -.22, '* q < 0.05 across all 16 pathway × time comparisons; bars: 95% cell-line bootstrap CI',
             transform=az.transAxes, fontsize=6.5, va='top')
     for label, axis in [('a', ax), ('b', ay), ('c', az)]:
