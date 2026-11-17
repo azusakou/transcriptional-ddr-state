@@ -47,9 +47,18 @@ def extract_all(path, definitions, canonical, cache):
             for k, v in json.loads(canonical.read_text())["sets"].items()
         }
     )
+    mapping_path = definitions.parent / "gene_identity_map.json"
+    symbol_map = (
+        json.loads(mapping_path.read_text())["source_symbol_map"]
+        if mapping_path.exists()
+        else {"MRE11": "MRE11A"}
+    )
     token = hashlib.sha256(
         (
-            str(path.resolve()) + str(path.stat().st_mtime_ns) + json.dumps(modules)
+            str(path.resolve())
+            + str(path.stat().st_mtime_ns)
+            + json.dumps(modules)
+            + json.dumps(symbol_map, sort_keys=True)
         ).encode()
     ).hexdigest()[:20]
     cache.mkdir(parents=True, exist_ok=True)
@@ -72,7 +81,15 @@ def extract_all(path, definitions, canonical, cache):
             return obs, np.load(cf)["scores"], modules
         genes = core.read_col(f["var"], "_index").astype(str)
         lookup = {g: j for j, g in enumerate(genes)}
-        present = sorted(set(sum(modules.values(), [])) & set(genes))
+        resolved = {
+            k: [g if g in lookup else symbol_map.get(g, g) for g in gl]
+            for k, gl in modules.items()
+        }
+        resolved = {k: [g for g in gl if g in lookup] for k, gl in resolved.items()}
+        assert all(
+            len(gl) == len(set(gl)) for gl in resolved.values()
+        ), "One source column cannot contribute twice"
+        present = sorted(set(sum(resolved.values(), [])))
         x = f["X"]
         arr = np.zeros((len(obs), len(present)), float)
         for j, g in enumerate(present):
@@ -83,7 +100,7 @@ def extract_all(path, definitions, canonical, cache):
         scores = np.column_stack(
             [
                 arr[:, [present.index(g) for g in gl if g in present]].mean(1)
-                for gl in modules.values()
+                for gl in resolved.values()
             ]
         )
     np.savez_compressed(cf, scores=scores)
@@ -630,6 +647,9 @@ def main():
         "source_stratified_sensitivity": "separate training-control references per source experiment and time; same pairs, folds and models",
         "weighted_model": "treated-cell-count weights normalized to mean one; inner selection remains equal-pair fractional logloss",
     }
+    identity_path = args.definitions.parent / "gene_identity_map.json"
+    if identity_path.exists():
+        spec["gene_identity_mapping"] = json.loads(identity_path.read_text())
     (out / "analysis_specification.json").write_text(json.dumps(spec, indent=2) + "\n")
     extra_summaries(pred, params, frozen, out)
     print("ALL SOURCE-MATCHED ANALYSES COMPLETE", flush=True)

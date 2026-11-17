@@ -76,9 +76,9 @@ def forecast_statistics(folder, bootstrap):
         main[main.model == "parsimonious_additive"].observed.to_numpy(),
         main[main.model == "parsimonious_additive"].predicted.to_numpy(),
     )
-    if abs(stats["r2"] - 0.4925950995) > 1e-8:
+    if abs(stats["r2"] - 0.505826051227275) > 1e-8:
         raise ValueError("Primary published R2 did not reproduce")
-    if abs(stats["mae"] - 0.1248396179) > 1e-8:
+    if abs(stats["mae"] - 0.122645864999196) > 1e-8:
         raise ValueError("Primary published MAE did not reproduce")
     return stats
 
@@ -382,7 +382,7 @@ def raw_analysis(inputs, results, args):
     elif args.raw in ["context", "source-mapping"]:
         folder = results / "source_context"
         for f in (METHODS / "context").iterdir():
-            if f.suffix in [".py", ".R"]:
+            if f.suffix in [".py", ".R", ".json"]:
                 shutil.copy2(f, folder / f.name)
         if args.raw == "source-mapping":
             subprocess.run(

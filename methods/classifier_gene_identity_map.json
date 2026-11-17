@@ -1,0 +1,2557 @@
+{
+  "source_url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+  "documentation": "https://www.genenames.org/download/archive/",
+  "retrieval_date": "2026-11-17",
+  "source_table_sha256": "6df77ac3cbaeb86a6dce5e17d851ebb27b6b3cdcd2471a211a3d8464f00c54c4",
+  "policy": "Exact source symbol first; otherwise require one approved/previous-symbol HGNC identity and exactly one source column. Synonym-only aliases, homologs, ambiguous and unmatched identities are not substituted. Each source gene contributes once per programme; module memberships and weights are unchanged.",
+  "dataset_source_symbol_maps": {
+    "McFarlandTsherniak2020": {
+      "ASNS": "ASNS",
+      "ATF3": "ATF3",
+      "ATF4": "ATF4",
+      "ATF6": "ATF6",
+      "ATM": "ATM",
+      "ATR": "ATR",
+      "AURKA": "AURKA",
+      "AURKB": "AURKB",
+      "BAX": "BAX",
+      "BBC3": "BBC3",
+      "BIRC3": "BIRC3",
+      "BRCA1": "BRCA1",
+      "BRCA2": "BRCA2",
+      "BTG2": "BTG2",
+      "CCNA2": "CCNA2",
+      "CCNB1": "CCNB1",
+      "CCNB2": "CCNB2",
+      "CCNE1": "CCNE1",
+      "CDC20": "CDC20",
+      "CDC6": "CDC6",
+      "CDK1": "CDK1",
+      "CDK2": "CDK2",
+      "CDKN1A": "CDKN1A",
+      "CEBPB": "CEBPB",
+      "CEBPG": "CEBPG",
+      "CHEK1": "CHEK1",
+      "CHEK2": "CHEK2",
+      "CLSPN": "CLSPN",
+      "CXCL8": "IL8",
+      "DDB2": "DDB2",
+      "DDIT3": "DDIT3",
+      "DNAJA1": "DNAJA1",
+      "DNAJB1": "DNAJB1",
+      "DNAJB9": "DNAJB9",
+      "DNAJC3": "DNAJC3",
+      "DUSP1": "DUSP1",
+      "DUSP5": "DUSP5",
+      "E2F1": "E2F1",
+      "E2F2": "E2F2",
+      "E2F3": "E2F3",
+      "EDEM1": "EDEM1",
+      "EGR1": "EGR1",
+      "EIF2AK3": "EIF2AK3",
+      "ERN1": "ERN1",
+      "FANCD2": "FANCD2",
+      "FAS": "FAS",
+      "FDXR": "FDXR",
+      "FOS": "FOS",
+      "FOSB": "FOSB",
+      "FOSL1": "FOSL1",
+      "FOSL2": "FOSL2",
+      "GADD45A": "GADD45A",
+      "GADD45B": "GADD45B",
+      "GADD45G": "GADD45G",
+      "H2AFX": "H2AFX",
+      "HERPUD1": "HERPUD1",
+      "HMOX1": "HMOX1",
+      "HSF1": "HSF1",
+      "HSP90AA1": "HSP90AA1",
+      "HSP90AB1": "HSP90AB1",
+      "HSPA1A": "HSPA1A",
+      "HSPA1B": "HSPA1B",
+      "HSPA5": "HSPA5",
+      "HSPB1": "HSPB1",
+      "HSPD1": "HSPD1",
+      "HSPE1": "HSPE1",
+      "ICAM1": "ICAM1",
+      "IER2": "IER2",
+      "IER3": "IER3",
+      "IL6": "IL6",
+      "JUN": "JUN",
+      "JUNB": "JUNB",
+      "JUND": "JUND",
+      "MCM2": "MCM2",
+      "MCM3": "MCM3",
+      "MCM4": "MCM4",
+      "MCM5": "MCM5",
+      "MCM6": "MCM6",
+      "MCM7": "MCM7",
+      "MDM2": "MDM2",
+      "MKI67": "MKI67",
+      "MRE11": "MRE11A",
+      "NBN": "NBN",
+      "NFKB1": "NFKB1",
+      "NFKBIA": "NFKBIA",
+      "PARP1": "PARP1",
+      "PCNA": "PCNA",
+      "PDIA4": "PDIA4",
+      "PDIA6": "PDIA6",
+      "PLK3": "PLK3",
+      "PMAIP1": "PMAIP1",
+      "PPM1D": "PPM1D",
+      "PPP1R15A": "PPP1R15A",
+      "RAD51": "RAD51",
+      "RELA": "RELA",
+      "RRM1": "RRM1",
+      "RRM2": "RRM2",
+      "RRM2B": "RRM2B",
+      "SEC61A1": "SEC61A1",
+      "SEL1L": "SEL1L",
+      "SESN1": "SESN1",
+      "SLC7A11": "SLC7A11",
+      "SLC7A5": "SLC7A5",
+      "TK1": "TK1",
+      "TNFAIP3": "TNFAIP3",
+      "TOP2A": "TOP2A",
+      "TOPBP1": "TOPBP1",
+      "TP53": "TP53",
+      "TRIB3": "TRIB3",
+      "TYMS": "TYMS",
+      "XBP1": "XBP1",
+      "XPC": "XPC",
+      "XRCC5": "XRCC5",
+      "XRCC6": "XRCC6",
+      "ZFP36": "ZFP36"
+    },
+    "SrivatsanTrapnell2020_sciplex2": {
+      "ASNS": "ASNS",
+      "ATF3": "ATF3",
+      "ATF4": "ATF4",
+      "ATF6": "ATF6",
+      "ATM": "ATM",
+      "ATR": "ATR",
+      "AURKA": "AURKA",
+      "AURKB": "AURKB",
+      "BAX": "BAX",
+      "BBC3": "BBC3",
+      "BIRC3": "BIRC3",
+      "BRCA1": "BRCA1",
+      "BRCA2": "BRCA2",
+      "BTG2": "BTG2",
+      "CCNA2": "CCNA2",
+      "CCNB1": "CCNB1",
+      "CCNB2": "CCNB2",
+      "CCNE1": "CCNE1",
+      "CDC20": "CDC20",
+      "CDC6": "CDC6",
+      "CDK1": "CDK1",
+      "CDK2": "CDK2",
+      "CDKN1A": "CDKN1A",
+      "CEBPB": "CEBPB",
+      "CEBPG": "CEBPG",
+      "CHEK1": "CHEK1",
+      "CHEK2": "CHEK2",
+      "CLSPN": "CLSPN",
+      "CXCL8": "CXCL8",
+      "DDB2": "DDB2",
+      "DDIT3": "DDIT3",
+      "DNAJA1": "DNAJA1",
+      "DNAJB1": "DNAJB1",
+      "DNAJB9": "DNAJB9",
+      "DNAJC3": "DNAJC3",
+      "DUSP1": "DUSP1",
+      "DUSP5": "DUSP5",
+      "E2F1": "E2F1",
+      "E2F2": "E2F2",
+      "E2F3": "E2F3",
+      "EDEM1": "EDEM1",
+      "EGR1": "EGR1",
+      "EIF2AK3": "EIF2AK3",
+      "ERN1": "ERN1",
+      "FANCD2": "FANCD2",
+      "FAS": "FAS",
+      "FDXR": "FDXR",
+      "FOS": "FOS",
+      "FOSB": "FOSB",
+      "FOSL1": "FOSL1",
+      "FOSL2": "FOSL2",
+      "GADD45A": "GADD45A",
+      "GADD45B": "GADD45B",
+      "GADD45G": "GADD45G",
+      "H2AFX": "H2AFX",
+      "HERPUD1": "HERPUD1",
+      "HMOX1": "HMOX1",
+      "HSF1": "HSF1",
+      "HSP90AA1": "HSP90AA1",
+      "HSP90AB1": "HSP90AB1",
+      "HSPA1A": "HSPA1A",
+      "HSPA1B": "HSPA1B",
+      "HSPA5": "HSPA5",
+      "HSPB1": "HSPB1",
+      "HSPD1": "HSPD1",
+      "HSPE1": "HSPE1",
+      "ICAM1": "ICAM1",
+      "IER2": "IER2",
+      "IER3": "IER3",
+      "IL6": "IL6",
+      "JUN": "JUN",
+      "JUNB": "JUNB",
+      "JUND": "JUND",
+      "MCM2": "MCM2",
+      "MCM3": "MCM3",
+      "MCM4": "MCM4",
+      "MCM5": "MCM5",
+      "MCM6": "MCM6",
+      "MCM7": "MCM7",
+      "MDM2": "MDM2",
+      "MKI67": "MKI67",
+      "MRE11": "MRE11",
+      "NBN": "NBN",
+      "NFKB1": "NFKB1",
+      "NFKBIA": "NFKBIA",
+      "PARP1": "PARP1",
+      "PCNA": "PCNA",
+      "PDIA4": "PDIA4",
+      "PDIA6": "PDIA6",
+      "PLK3": "PLK3",
+      "PMAIP1": "PMAIP1",
+      "PPM1D": "PPM1D",
+      "PPP1R15A": "PPP1R15A",
+      "RAD51": "RAD51",
+      "RELA": "RELA",
+      "RRM1": "RRM1",
+      "RRM2": "RRM2",
+      "RRM2B": "RRM2B",
+      "SEC61A1": "SEC61A1",
+      "SEL1L": "SEL1L",
+      "SESN1": "SESN1",
+      "SLC7A11": "SLC7A11",
+      "SLC7A5": "SLC7A5",
+      "TK1": "TK1",
+      "TNFAIP3": "TNFAIP3",
+      "TOP2A": "TOP2A",
+      "TOPBP1": "TOPBP1",
+      "TP53": "TP53",
+      "TRIB3": "TRIB3",
+      "TYMS": "TYMS",
+      "XBP1": "XBP1",
+      "XPC": "XPC",
+      "XRCC5": "XRCC5",
+      "XRCC6": "XRCC6",
+      "ZFP36": "ZFP36"
+    }
+  },
+  "records": [
+    {
+      "requested_symbol": "ASNS",
+      "source_symbol": "ASNS",
+      "hgnc_id": "HGNC:753",
+      "approved_symbol": "ASNS",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ATF3",
+      "source_symbol": "ATF3",
+      "hgnc_id": "HGNC:785",
+      "approved_symbol": "ATF3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ATF4",
+      "source_symbol": "ATF4",
+      "hgnc_id": "HGNC:786",
+      "approved_symbol": "ATF4",
+      "previous_symbols": [
+        "TXREB"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ATF6",
+      "source_symbol": "ATF6",
+      "hgnc_id": "HGNC:791",
+      "approved_symbol": "ATF6",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ATM",
+      "source_symbol": "ATM",
+      "hgnc_id": "HGNC:795",
+      "approved_symbol": "ATM",
+      "previous_symbols": [
+        "ATA",
+        "ATDC",
+        "ATC",
+        "ATD"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ATR",
+      "source_symbol": "ATR",
+      "hgnc_id": "HGNC:882",
+      "approved_symbol": "ATR",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "AURKA",
+      "source_symbol": "AURKA",
+      "hgnc_id": "HGNC:11393",
+      "approved_symbol": "AURKA",
+      "previous_symbols": [
+        "STK15",
+        "STK6"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "AURKB",
+      "source_symbol": "AURKB",
+      "hgnc_id": "HGNC:11390",
+      "approved_symbol": "AURKB",
+      "previous_symbols": [
+        "STK12"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "BAX",
+      "source_symbol": "BAX",
+      "hgnc_id": "HGNC:959",
+      "approved_symbol": "BAX",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "BBC3",
+      "source_symbol": "BBC3",
+      "hgnc_id": "HGNC:17868",
+      "approved_symbol": "BBC3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "BIRC3",
+      "source_symbol": "BIRC3",
+      "hgnc_id": "HGNC:591",
+      "approved_symbol": "BIRC3",
+      "previous_symbols": [
+        "API2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "BRCA1",
+      "source_symbol": "BRCA1",
+      "hgnc_id": "HGNC:1100",
+      "approved_symbol": "BRCA1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "BRCA2",
+      "source_symbol": "BRCA2",
+      "hgnc_id": "HGNC:1101",
+      "approved_symbol": "BRCA2",
+      "previous_symbols": [
+        "FANCD1",
+        "FACD",
+        "FANCD"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "BTG2",
+      "source_symbol": "BTG2",
+      "hgnc_id": "HGNC:1131",
+      "approved_symbol": "BTG2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CCNA2",
+      "source_symbol": "CCNA2",
+      "hgnc_id": "HGNC:1578",
+      "approved_symbol": "CCNA2",
+      "previous_symbols": [
+        "CCNA",
+        "CCN1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CCNB1",
+      "source_symbol": "CCNB1",
+      "hgnc_id": "HGNC:1579",
+      "approved_symbol": "CCNB1",
+      "previous_symbols": [
+        "CCNB"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CCNB2",
+      "source_symbol": "CCNB2",
+      "hgnc_id": "HGNC:1580",
+      "approved_symbol": "CCNB2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CCNE1",
+      "source_symbol": "CCNE1",
+      "hgnc_id": "HGNC:1589",
+      "approved_symbol": "CCNE1",
+      "previous_symbols": [
+        "CCNE"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CDC20",
+      "source_symbol": "CDC20",
+      "hgnc_id": "HGNC:1723",
+      "approved_symbol": "CDC20",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CDC6",
+      "source_symbol": "CDC6",
+      "hgnc_id": "HGNC:1744",
+      "approved_symbol": "CDC6",
+      "previous_symbols": [
+        "CDC18L"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CDK1",
+      "source_symbol": "CDK1",
+      "hgnc_id": "HGNC:1722",
+      "approved_symbol": "CDK1",
+      "previous_symbols": [
+        "CDC2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CDK2",
+      "source_symbol": "CDK2",
+      "hgnc_id": "HGNC:1771",
+      "approved_symbol": "CDK2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CDKN1A",
+      "source_symbol": "CDKN1A",
+      "hgnc_id": "HGNC:1784",
+      "approved_symbol": "CDKN1A",
+      "previous_symbols": [
+        "CDKN1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CEBPB",
+      "source_symbol": "CEBPB",
+      "hgnc_id": "HGNC:1834",
+      "approved_symbol": "CEBPB",
+      "previous_symbols": [
+        "TCF5"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CEBPG",
+      "source_symbol": "CEBPG",
+      "hgnc_id": "HGNC:1837",
+      "approved_symbol": "CEBPG",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CHEK1",
+      "source_symbol": "CHEK1",
+      "hgnc_id": "HGNC:1925",
+      "approved_symbol": "CHEK1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CHEK2",
+      "source_symbol": "CHEK2",
+      "hgnc_id": "HGNC:16627",
+      "approved_symbol": "CHEK2",
+      "previous_symbols": [
+        "RAD53"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CLSPN",
+      "source_symbol": "CLSPN",
+      "hgnc_id": "HGNC:19715",
+      "approved_symbol": "CLSPN",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "CXCL8",
+      "source_symbol": "IL8",
+      "hgnc_id": "HGNC:6025",
+      "approved_symbol": "CXCL8",
+      "previous_symbols": [
+        "IL8"
+      ],
+      "resolution": "unique HGNC approved/previous-symbol identity",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DDB2",
+      "source_symbol": "DDB2",
+      "hgnc_id": "HGNC:2718",
+      "approved_symbol": "DDB2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DDIT3",
+      "source_symbol": "DDIT3",
+      "hgnc_id": "HGNC:2726",
+      "approved_symbol": "DDIT3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DNAJA1",
+      "source_symbol": "DNAJA1",
+      "hgnc_id": "HGNC:5229",
+      "approved_symbol": "DNAJA1",
+      "previous_symbols": [
+        "HSJ2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DNAJB1",
+      "source_symbol": "DNAJB1",
+      "hgnc_id": "HGNC:5270",
+      "approved_symbol": "DNAJB1",
+      "previous_symbols": [
+        "HSPF1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DNAJB9",
+      "source_symbol": "DNAJB9",
+      "hgnc_id": "HGNC:6968",
+      "approved_symbol": "DNAJB9",
+      "previous_symbols": [
+        "MDG1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DNAJC3",
+      "source_symbol": "DNAJC3",
+      "hgnc_id": "HGNC:9439",
+      "approved_symbol": "DNAJC3",
+      "previous_symbols": [
+        "PRKRI"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DUSP1",
+      "source_symbol": "DUSP1",
+      "hgnc_id": "HGNC:3064",
+      "approved_symbol": "DUSP1",
+      "previous_symbols": [
+        "PTPN10"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "DUSP5",
+      "source_symbol": "DUSP5",
+      "hgnc_id": "HGNC:3071",
+      "approved_symbol": "DUSP5",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "E2F1",
+      "source_symbol": "E2F1",
+      "hgnc_id": "HGNC:3113",
+      "approved_symbol": "E2F1",
+      "previous_symbols": [
+        "RBBP3"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "E2F2",
+      "source_symbol": "E2F2",
+      "hgnc_id": "HGNC:3114",
+      "approved_symbol": "E2F2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "E2F3",
+      "source_symbol": "E2F3",
+      "hgnc_id": "HGNC:3115",
+      "approved_symbol": "E2F3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "EDEM1",
+      "source_symbol": "EDEM1",
+      "hgnc_id": "HGNC:18967",
+      "approved_symbol": "EDEM1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "EGR1",
+      "source_symbol": "EGR1",
+      "hgnc_id": "HGNC:3238",
+      "approved_symbol": "EGR1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "EIF2AK3",
+      "source_symbol": "EIF2AK3",
+      "hgnc_id": "HGNC:3255",
+      "approved_symbol": "EIF2AK3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ERN1",
+      "source_symbol": "ERN1",
+      "hgnc_id": "HGNC:3449",
+      "approved_symbol": "ERN1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FANCD2",
+      "source_symbol": "FANCD2",
+      "hgnc_id": "HGNC:3585",
+      "approved_symbol": "FANCD2",
+      "previous_symbols": [
+        "FACD",
+        "FANCD"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FAS",
+      "source_symbol": "FAS",
+      "hgnc_id": "HGNC:11920",
+      "approved_symbol": "FAS",
+      "previous_symbols": [
+        "FAS1",
+        "APT1",
+        "TNFRSF6"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FDXR",
+      "source_symbol": "FDXR",
+      "hgnc_id": "HGNC:3642",
+      "approved_symbol": "FDXR",
+      "previous_symbols": [
+        "ADXR"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FOS",
+      "source_symbol": "FOS",
+      "hgnc_id": "HGNC:3796",
+      "approved_symbol": "FOS",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FOSB",
+      "source_symbol": "FOSB",
+      "hgnc_id": "HGNC:3797",
+      "approved_symbol": "FOSB",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FOSL1",
+      "source_symbol": "FOSL1",
+      "hgnc_id": "HGNC:13718",
+      "approved_symbol": "FOSL1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "FOSL2",
+      "source_symbol": "FOSL2",
+      "hgnc_id": "HGNC:3798",
+      "approved_symbol": "FOSL2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "GADD45A",
+      "source_symbol": "GADD45A",
+      "hgnc_id": "HGNC:4095",
+      "approved_symbol": "GADD45A",
+      "previous_symbols": [
+        "DDIT1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "GADD45B",
+      "source_symbol": "GADD45B",
+      "hgnc_id": "HGNC:4096",
+      "approved_symbol": "GADD45B",
+      "previous_symbols": [
+        "MYD118"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "GADD45G",
+      "source_symbol": "GADD45G",
+      "hgnc_id": "HGNC:4097",
+      "approved_symbol": "GADD45G",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "H2AFX",
+      "source_symbol": "H2AFX",
+      "hgnc_id": "HGNC:4739",
+      "approved_symbol": "H2AX",
+      "previous_symbols": [
+        "H2AFX"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HERPUD1",
+      "source_symbol": "HERPUD1",
+      "hgnc_id": "HGNC:13744",
+      "approved_symbol": "HERPUD1",
+      "previous_symbols": [
+        "HERPUD1-IT1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HMOX1",
+      "source_symbol": "HMOX1",
+      "hgnc_id": "HGNC:5013",
+      "approved_symbol": "HMOX1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSF1",
+      "source_symbol": "HSF1",
+      "hgnc_id": "HGNC:5224",
+      "approved_symbol": "HSF1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSP90AA1",
+      "source_symbol": "HSP90AA1",
+      "hgnc_id": "HGNC:5253",
+      "approved_symbol": "HSP90AA1",
+      "previous_symbols": [
+        "HSPC1",
+        "HSPCA",
+        "HSPCAL4"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSP90AB1",
+      "source_symbol": "HSP90AB1",
+      "hgnc_id": "HGNC:5258",
+      "approved_symbol": "HSP90AB1",
+      "previous_symbols": [
+        "HSPC2",
+        "HSPCB"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSPA1A",
+      "source_symbol": "HSPA1A",
+      "hgnc_id": "HGNC:5232",
+      "approved_symbol": "HSPA1A",
+      "previous_symbols": [
+        "HSPA1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSPA1B",
+      "source_symbol": "HSPA1B",
+      "hgnc_id": "HGNC:5233",
+      "approved_symbol": "HSPA1B",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSPA5",
+      "source_symbol": "HSPA5",
+      "hgnc_id": "HGNC:5238",
+      "approved_symbol": "HSPA5",
+      "previous_symbols": [
+        "GRP78"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSPB1",
+      "source_symbol": "HSPB1",
+      "hgnc_id": "HGNC:5246",
+      "approved_symbol": "HSPB1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSPD1",
+      "source_symbol": "HSPD1",
+      "hgnc_id": "HGNC:5261",
+      "approved_symbol": "HSPD1",
+      "previous_symbols": [
+        "SPG13"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "HSPE1",
+      "source_symbol": "HSPE1",
+      "hgnc_id": "HGNC:5269",
+      "approved_symbol": "HSPE1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ICAM1",
+      "source_symbol": "ICAM1",
+      "hgnc_id": "HGNC:5344",
+      "approved_symbol": "ICAM1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "IER2",
+      "source_symbol": "IER2",
+      "hgnc_id": "HGNC:28871",
+      "approved_symbol": "IER2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "IER3",
+      "source_symbol": "IER3",
+      "hgnc_id": "HGNC:5392",
+      "approved_symbol": "IER3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "IL6",
+      "source_symbol": "IL6",
+      "hgnc_id": "HGNC:6018",
+      "approved_symbol": "IL6",
+      "previous_symbols": [
+        "IFNB2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "JUN",
+      "source_symbol": "JUN",
+      "hgnc_id": "HGNC:6204",
+      "approved_symbol": "JUN",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "JUNB",
+      "source_symbol": "JUNB",
+      "hgnc_id": "HGNC:6205",
+      "approved_symbol": "JUNB",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "JUND",
+      "source_symbol": "JUND",
+      "hgnc_id": "HGNC:6206",
+      "approved_symbol": "JUND",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MCM2",
+      "source_symbol": "MCM2",
+      "hgnc_id": "HGNC:6944",
+      "approved_symbol": "MCM2",
+      "previous_symbols": [
+        "CCNL1",
+        "CDCL1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MCM3",
+      "source_symbol": "MCM3",
+      "hgnc_id": "HGNC:6945",
+      "approved_symbol": "MCM3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MCM4",
+      "source_symbol": "MCM4",
+      "hgnc_id": "HGNC:6947",
+      "approved_symbol": "MCM4",
+      "previous_symbols": [
+        "CDC21"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MCM5",
+      "source_symbol": "MCM5",
+      "hgnc_id": "HGNC:6948",
+      "approved_symbol": "MCM5",
+      "previous_symbols": [
+        "CDC46"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MCM6",
+      "source_symbol": "MCM6",
+      "hgnc_id": "HGNC:6949",
+      "approved_symbol": "MCM6",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MCM7",
+      "source_symbol": "MCM7",
+      "hgnc_id": "HGNC:6950",
+      "approved_symbol": "MCM7",
+      "previous_symbols": [
+        "MCM2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MDM2",
+      "source_symbol": "MDM2",
+      "hgnc_id": "HGNC:6973",
+      "approved_symbol": "MDM2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MKI67",
+      "source_symbol": "MKI67",
+      "hgnc_id": "HGNC:7107",
+      "approved_symbol": "MKI67",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "MRE11",
+      "source_symbol": "MRE11A",
+      "hgnc_id": "HGNC:7230",
+      "approved_symbol": "MRE11",
+      "previous_symbols": [
+        "MRE11A"
+      ],
+      "resolution": "unique HGNC approved/previous-symbol identity",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "NBN",
+      "source_symbol": "NBN",
+      "hgnc_id": "HGNC:7652",
+      "approved_symbol": "NBN",
+      "previous_symbols": [
+        "NBS",
+        "NBS1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "NFKB1",
+      "source_symbol": "NFKB1",
+      "hgnc_id": "HGNC:7794",
+      "approved_symbol": "NFKB1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "NFKBIA",
+      "source_symbol": "NFKBIA",
+      "hgnc_id": "HGNC:7797",
+      "approved_symbol": "NFKBIA",
+      "previous_symbols": [
+        "NFKBI"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PARP1",
+      "source_symbol": "PARP1",
+      "hgnc_id": "HGNC:270",
+      "approved_symbol": "PARP1",
+      "previous_symbols": [
+        "PPOL",
+        "ADPRT"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PCNA",
+      "source_symbol": "PCNA",
+      "hgnc_id": "HGNC:8729",
+      "approved_symbol": "PCNA",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PDIA4",
+      "source_symbol": "PDIA4",
+      "hgnc_id": "HGNC:30167",
+      "approved_symbol": "PDIA4",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PDIA6",
+      "source_symbol": "PDIA6",
+      "hgnc_id": "HGNC:30168",
+      "approved_symbol": "PDIA6",
+      "previous_symbols": [
+        "TXNDC7"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PLK3",
+      "source_symbol": "PLK3",
+      "hgnc_id": "HGNC:2154",
+      "approved_symbol": "PLK3",
+      "previous_symbols": [
+        "CNK"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PMAIP1",
+      "source_symbol": "PMAIP1",
+      "hgnc_id": "HGNC:9108",
+      "approved_symbol": "PMAIP1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PPM1D",
+      "source_symbol": "PPM1D",
+      "hgnc_id": "HGNC:9277",
+      "approved_symbol": "PPM1D",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "PPP1R15A",
+      "source_symbol": "PPP1R15A",
+      "hgnc_id": "HGNC:14375",
+      "approved_symbol": "PPP1R15A",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "RAD51",
+      "source_symbol": "RAD51",
+      "hgnc_id": "HGNC:9817",
+      "approved_symbol": "RAD51",
+      "previous_symbols": [
+        "RAD51A",
+        "RECA"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "RELA",
+      "source_symbol": "RELA",
+      "hgnc_id": "HGNC:9955",
+      "approved_symbol": "RELA",
+      "previous_symbols": [
+        "NFKB3"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "RRM1",
+      "source_symbol": "RRM1",
+      "hgnc_id": "HGNC:10451",
+      "approved_symbol": "RRM1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "RRM2",
+      "source_symbol": "RRM2",
+      "hgnc_id": "HGNC:10452",
+      "approved_symbol": "RRM2",
+      "previous_symbols": [
+        "C2orf48"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "RRM2B",
+      "source_symbol": "RRM2B",
+      "hgnc_id": "HGNC:17296",
+      "approved_symbol": "RRM2B",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "SEC61A1",
+      "source_symbol": "SEC61A1",
+      "hgnc_id": "HGNC:18276",
+      "approved_symbol": "SEC61A1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "SEL1L",
+      "source_symbol": "SEL1L",
+      "hgnc_id": "HGNC:10717",
+      "approved_symbol": "SEL1L",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "SESN1",
+      "source_symbol": "SESN1",
+      "hgnc_id": "HGNC:21595",
+      "approved_symbol": "SESN1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "SLC7A11",
+      "source_symbol": "SLC7A11",
+      "hgnc_id": "HGNC:11059",
+      "approved_symbol": "SLC7A11",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "SLC7A5",
+      "source_symbol": "SLC7A5",
+      "hgnc_id": "HGNC:11063",
+      "approved_symbol": "SLC7A5",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TK1",
+      "source_symbol": "TK1",
+      "hgnc_id": "HGNC:11830",
+      "approved_symbol": "TK1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TNFAIP3",
+      "source_symbol": "TNFAIP3",
+      "hgnc_id": "HGNC:11896",
+      "approved_symbol": "TNFAIP3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TOP2A",
+      "source_symbol": "TOP2A",
+      "hgnc_id": "HGNC:11989",
+      "approved_symbol": "TOP2A",
+      "previous_symbols": [
+        "TOP2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TOPBP1",
+      "source_symbol": "TOPBP1",
+      "hgnc_id": "HGNC:17008",
+      "approved_symbol": "TOPBP1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TP53",
+      "source_symbol": "TP53",
+      "hgnc_id": "HGNC:11998",
+      "approved_symbol": "TP53",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TRIB3",
+      "source_symbol": "TRIB3",
+      "hgnc_id": "HGNC:16228",
+      "approved_symbol": "TRIB3",
+      "previous_symbols": [
+        "C20orf97"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "TYMS",
+      "source_symbol": "TYMS",
+      "hgnc_id": "HGNC:12441",
+      "approved_symbol": "TYMS",
+      "previous_symbols": [
+        "TS"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "XBP1",
+      "source_symbol": "XBP1",
+      "hgnc_id": "HGNC:12801",
+      "approved_symbol": "XBP1",
+      "previous_symbols": [
+        "XBP2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "XPC",
+      "source_symbol": "XPC",
+      "hgnc_id": "HGNC:12816",
+      "approved_symbol": "XPC",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "XRCC5",
+      "source_symbol": "XRCC5",
+      "hgnc_id": "HGNC:12833",
+      "approved_symbol": "XRCC5",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "XRCC6",
+      "source_symbol": "XRCC6",
+      "hgnc_id": "HGNC:4055",
+      "approved_symbol": "XRCC6",
+      "previous_symbols": [
+        "G22P1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ZFP36",
+      "source_symbol": "ZFP36",
+      "hgnc_id": "HGNC:12862",
+      "approved_symbol": "ZFP36",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "McFarlandTsherniak2020"
+    },
+    {
+      "requested_symbol": "ASNS",
+      "source_symbol": "ASNS",
+      "hgnc_id": "HGNC:753",
+      "approved_symbol": "ASNS",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ATF3",
+      "source_symbol": "ATF3",
+      "hgnc_id": "HGNC:785",
+      "approved_symbol": "ATF3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ATF4",
+      "source_symbol": "ATF4",
+      "hgnc_id": "HGNC:786",
+      "approved_symbol": "ATF4",
+      "previous_symbols": [
+        "TXREB"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ATF6",
+      "source_symbol": "ATF6",
+      "hgnc_id": "HGNC:791",
+      "approved_symbol": "ATF6",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ATM",
+      "source_symbol": "ATM",
+      "hgnc_id": "HGNC:795",
+      "approved_symbol": "ATM",
+      "previous_symbols": [
+        "ATA",
+        "ATDC",
+        "ATC",
+        "ATD"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ATR",
+      "source_symbol": "ATR",
+      "hgnc_id": "HGNC:882",
+      "approved_symbol": "ATR",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "AURKA",
+      "source_symbol": "AURKA",
+      "hgnc_id": "HGNC:11393",
+      "approved_symbol": "AURKA",
+      "previous_symbols": [
+        "STK15",
+        "STK6"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "AURKB",
+      "source_symbol": "AURKB",
+      "hgnc_id": "HGNC:11390",
+      "approved_symbol": "AURKB",
+      "previous_symbols": [
+        "STK12"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "BAX",
+      "source_symbol": "BAX",
+      "hgnc_id": "HGNC:959",
+      "approved_symbol": "BAX",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "BBC3",
+      "source_symbol": "BBC3",
+      "hgnc_id": "HGNC:17868",
+      "approved_symbol": "BBC3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "BIRC3",
+      "source_symbol": "BIRC3",
+      "hgnc_id": "HGNC:591",
+      "approved_symbol": "BIRC3",
+      "previous_symbols": [
+        "API2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "BRCA1",
+      "source_symbol": "BRCA1",
+      "hgnc_id": "HGNC:1100",
+      "approved_symbol": "BRCA1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "BRCA2",
+      "source_symbol": "BRCA2",
+      "hgnc_id": "HGNC:1101",
+      "approved_symbol": "BRCA2",
+      "previous_symbols": [
+        "FANCD1",
+        "FACD",
+        "FANCD"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "BTG2",
+      "source_symbol": "BTG2",
+      "hgnc_id": "HGNC:1131",
+      "approved_symbol": "BTG2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CCNA2",
+      "source_symbol": "CCNA2",
+      "hgnc_id": "HGNC:1578",
+      "approved_symbol": "CCNA2",
+      "previous_symbols": [
+        "CCNA",
+        "CCN1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CCNB1",
+      "source_symbol": "CCNB1",
+      "hgnc_id": "HGNC:1579",
+      "approved_symbol": "CCNB1",
+      "previous_symbols": [
+        "CCNB"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CCNB2",
+      "source_symbol": "CCNB2",
+      "hgnc_id": "HGNC:1580",
+      "approved_symbol": "CCNB2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CCNE1",
+      "source_symbol": "CCNE1",
+      "hgnc_id": "HGNC:1589",
+      "approved_symbol": "CCNE1",
+      "previous_symbols": [
+        "CCNE"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CDC20",
+      "source_symbol": "CDC20",
+      "hgnc_id": "HGNC:1723",
+      "approved_symbol": "CDC20",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CDC6",
+      "source_symbol": "CDC6",
+      "hgnc_id": "HGNC:1744",
+      "approved_symbol": "CDC6",
+      "previous_symbols": [
+        "CDC18L"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CDK1",
+      "source_symbol": "CDK1",
+      "hgnc_id": "HGNC:1722",
+      "approved_symbol": "CDK1",
+      "previous_symbols": [
+        "CDC2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CDK2",
+      "source_symbol": "CDK2",
+      "hgnc_id": "HGNC:1771",
+      "approved_symbol": "CDK2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CDKN1A",
+      "source_symbol": "CDKN1A",
+      "hgnc_id": "HGNC:1784",
+      "approved_symbol": "CDKN1A",
+      "previous_symbols": [
+        "CDKN1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CEBPB",
+      "source_symbol": "CEBPB",
+      "hgnc_id": "HGNC:1834",
+      "approved_symbol": "CEBPB",
+      "previous_symbols": [
+        "TCF5"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CEBPG",
+      "source_symbol": "CEBPG",
+      "hgnc_id": "HGNC:1837",
+      "approved_symbol": "CEBPG",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CHEK1",
+      "source_symbol": "CHEK1",
+      "hgnc_id": "HGNC:1925",
+      "approved_symbol": "CHEK1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CHEK2",
+      "source_symbol": "CHEK2",
+      "hgnc_id": "HGNC:16627",
+      "approved_symbol": "CHEK2",
+      "previous_symbols": [
+        "RAD53"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CLSPN",
+      "source_symbol": "CLSPN",
+      "hgnc_id": "HGNC:19715",
+      "approved_symbol": "CLSPN",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "CXCL8",
+      "source_symbol": "CXCL8",
+      "hgnc_id": "HGNC:6025",
+      "approved_symbol": "CXCL8",
+      "previous_symbols": [
+        "IL8"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DDB2",
+      "source_symbol": "DDB2",
+      "hgnc_id": "HGNC:2718",
+      "approved_symbol": "DDB2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DDIT3",
+      "source_symbol": "DDIT3",
+      "hgnc_id": "HGNC:2726",
+      "approved_symbol": "DDIT3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DNAJA1",
+      "source_symbol": "DNAJA1",
+      "hgnc_id": "HGNC:5229",
+      "approved_symbol": "DNAJA1",
+      "previous_symbols": [
+        "HSJ2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DNAJB1",
+      "source_symbol": "DNAJB1",
+      "hgnc_id": "HGNC:5270",
+      "approved_symbol": "DNAJB1",
+      "previous_symbols": [
+        "HSPF1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DNAJB9",
+      "source_symbol": "DNAJB9",
+      "hgnc_id": "HGNC:6968",
+      "approved_symbol": "DNAJB9",
+      "previous_symbols": [
+        "MDG1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DNAJC3",
+      "source_symbol": "DNAJC3",
+      "hgnc_id": "HGNC:9439",
+      "approved_symbol": "DNAJC3",
+      "previous_symbols": [
+        "PRKRI"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DUSP1",
+      "source_symbol": "DUSP1",
+      "hgnc_id": "HGNC:3064",
+      "approved_symbol": "DUSP1",
+      "previous_symbols": [
+        "PTPN10"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "DUSP5",
+      "source_symbol": "DUSP5",
+      "hgnc_id": "HGNC:3071",
+      "approved_symbol": "DUSP5",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "E2F1",
+      "source_symbol": "E2F1",
+      "hgnc_id": "HGNC:3113",
+      "approved_symbol": "E2F1",
+      "previous_symbols": [
+        "RBBP3"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "E2F2",
+      "source_symbol": "E2F2",
+      "hgnc_id": "HGNC:3114",
+      "approved_symbol": "E2F2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "E2F3",
+      "source_symbol": "E2F3",
+      "hgnc_id": "HGNC:3115",
+      "approved_symbol": "E2F3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "EDEM1",
+      "source_symbol": "EDEM1",
+      "hgnc_id": "HGNC:18967",
+      "approved_symbol": "EDEM1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "EGR1",
+      "source_symbol": "EGR1",
+      "hgnc_id": "HGNC:3238",
+      "approved_symbol": "EGR1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "EIF2AK3",
+      "source_symbol": "EIF2AK3",
+      "hgnc_id": "HGNC:3255",
+      "approved_symbol": "EIF2AK3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ERN1",
+      "source_symbol": "ERN1",
+      "hgnc_id": "HGNC:3449",
+      "approved_symbol": "ERN1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FANCD2",
+      "source_symbol": "FANCD2",
+      "hgnc_id": "HGNC:3585",
+      "approved_symbol": "FANCD2",
+      "previous_symbols": [
+        "FACD",
+        "FANCD"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FAS",
+      "source_symbol": "FAS",
+      "hgnc_id": "HGNC:11920",
+      "approved_symbol": "FAS",
+      "previous_symbols": [
+        "FAS1",
+        "APT1",
+        "TNFRSF6"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FDXR",
+      "source_symbol": "FDXR",
+      "hgnc_id": "HGNC:3642",
+      "approved_symbol": "FDXR",
+      "previous_symbols": [
+        "ADXR"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FOS",
+      "source_symbol": "FOS",
+      "hgnc_id": "HGNC:3796",
+      "approved_symbol": "FOS",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FOSB",
+      "source_symbol": "FOSB",
+      "hgnc_id": "HGNC:3797",
+      "approved_symbol": "FOSB",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FOSL1",
+      "source_symbol": "FOSL1",
+      "hgnc_id": "HGNC:13718",
+      "approved_symbol": "FOSL1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "FOSL2",
+      "source_symbol": "FOSL2",
+      "hgnc_id": "HGNC:3798",
+      "approved_symbol": "FOSL2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "GADD45A",
+      "source_symbol": "GADD45A",
+      "hgnc_id": "HGNC:4095",
+      "approved_symbol": "GADD45A",
+      "previous_symbols": [
+        "DDIT1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "GADD45B",
+      "source_symbol": "GADD45B",
+      "hgnc_id": "HGNC:4096",
+      "approved_symbol": "GADD45B",
+      "previous_symbols": [
+        "MYD118"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "GADD45G",
+      "source_symbol": "GADD45G",
+      "hgnc_id": "HGNC:4097",
+      "approved_symbol": "GADD45G",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "H2AFX",
+      "source_symbol": "H2AFX",
+      "hgnc_id": "HGNC:4739",
+      "approved_symbol": "H2AX",
+      "previous_symbols": [
+        "H2AFX"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HERPUD1",
+      "source_symbol": "HERPUD1",
+      "hgnc_id": "HGNC:13744",
+      "approved_symbol": "HERPUD1",
+      "previous_symbols": [
+        "HERPUD1-IT1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HMOX1",
+      "source_symbol": "HMOX1",
+      "hgnc_id": "HGNC:5013",
+      "approved_symbol": "HMOX1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSF1",
+      "source_symbol": "HSF1",
+      "hgnc_id": "HGNC:5224",
+      "approved_symbol": "HSF1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSP90AA1",
+      "source_symbol": "HSP90AA1",
+      "hgnc_id": "HGNC:5253",
+      "approved_symbol": "HSP90AA1",
+      "previous_symbols": [
+        "HSPC1",
+        "HSPCA",
+        "HSPCAL4"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSP90AB1",
+      "source_symbol": "HSP90AB1",
+      "hgnc_id": "HGNC:5258",
+      "approved_symbol": "HSP90AB1",
+      "previous_symbols": [
+        "HSPC2",
+        "HSPCB"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSPA1A",
+      "source_symbol": "HSPA1A",
+      "hgnc_id": "HGNC:5232",
+      "approved_symbol": "HSPA1A",
+      "previous_symbols": [
+        "HSPA1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSPA1B",
+      "source_symbol": "HSPA1B",
+      "hgnc_id": "HGNC:5233",
+      "approved_symbol": "HSPA1B",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSPA5",
+      "source_symbol": "HSPA5",
+      "hgnc_id": "HGNC:5238",
+      "approved_symbol": "HSPA5",
+      "previous_symbols": [
+        "GRP78"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSPB1",
+      "source_symbol": "HSPB1",
+      "hgnc_id": "HGNC:5246",
+      "approved_symbol": "HSPB1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSPD1",
+      "source_symbol": "HSPD1",
+      "hgnc_id": "HGNC:5261",
+      "approved_symbol": "HSPD1",
+      "previous_symbols": [
+        "SPG13"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "HSPE1",
+      "source_symbol": "HSPE1",
+      "hgnc_id": "HGNC:5269",
+      "approved_symbol": "HSPE1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ICAM1",
+      "source_symbol": "ICAM1",
+      "hgnc_id": "HGNC:5344",
+      "approved_symbol": "ICAM1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "IER2",
+      "source_symbol": "IER2",
+      "hgnc_id": "HGNC:28871",
+      "approved_symbol": "IER2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "IER3",
+      "source_symbol": "IER3",
+      "hgnc_id": "HGNC:5392",
+      "approved_symbol": "IER3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "IL6",
+      "source_symbol": "IL6",
+      "hgnc_id": "HGNC:6018",
+      "approved_symbol": "IL6",
+      "previous_symbols": [
+        "IFNB2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "JUN",
+      "source_symbol": "JUN",
+      "hgnc_id": "HGNC:6204",
+      "approved_symbol": "JUN",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "JUNB",
+      "source_symbol": "JUNB",
+      "hgnc_id": "HGNC:6205",
+      "approved_symbol": "JUNB",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "JUND",
+      "source_symbol": "JUND",
+      "hgnc_id": "HGNC:6206",
+      "approved_symbol": "JUND",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MCM2",
+      "source_symbol": "MCM2",
+      "hgnc_id": "HGNC:6944",
+      "approved_symbol": "MCM2",
+      "previous_symbols": [
+        "CCNL1",
+        "CDCL1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MCM3",
+      "source_symbol": "MCM3",
+      "hgnc_id": "HGNC:6945",
+      "approved_symbol": "MCM3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MCM4",
+      "source_symbol": "MCM4",
+      "hgnc_id": "HGNC:6947",
+      "approved_symbol": "MCM4",
+      "previous_symbols": [
+        "CDC21"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MCM5",
+      "source_symbol": "MCM5",
+      "hgnc_id": "HGNC:6948",
+      "approved_symbol": "MCM5",
+      "previous_symbols": [
+        "CDC46"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MCM6",
+      "source_symbol": "MCM6",
+      "hgnc_id": "HGNC:6949",
+      "approved_symbol": "MCM6",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MCM7",
+      "source_symbol": "MCM7",
+      "hgnc_id": "HGNC:6950",
+      "approved_symbol": "MCM7",
+      "previous_symbols": [
+        "MCM2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MDM2",
+      "source_symbol": "MDM2",
+      "hgnc_id": "HGNC:6973",
+      "approved_symbol": "MDM2",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MKI67",
+      "source_symbol": "MKI67",
+      "hgnc_id": "HGNC:7107",
+      "approved_symbol": "MKI67",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "MRE11",
+      "source_symbol": "MRE11",
+      "hgnc_id": "HGNC:7230",
+      "approved_symbol": "MRE11",
+      "previous_symbols": [
+        "MRE11A"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "NBN",
+      "source_symbol": "NBN",
+      "hgnc_id": "HGNC:7652",
+      "approved_symbol": "NBN",
+      "previous_symbols": [
+        "NBS",
+        "NBS1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "NFKB1",
+      "source_symbol": "NFKB1",
+      "hgnc_id": "HGNC:7794",
+      "approved_symbol": "NFKB1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "NFKBIA",
+      "source_symbol": "NFKBIA",
+      "hgnc_id": "HGNC:7797",
+      "approved_symbol": "NFKBIA",
+      "previous_symbols": [
+        "NFKBI"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PARP1",
+      "source_symbol": "PARP1",
+      "hgnc_id": "HGNC:270",
+      "approved_symbol": "PARP1",
+      "previous_symbols": [
+        "PPOL",
+        "ADPRT"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PCNA",
+      "source_symbol": "PCNA",
+      "hgnc_id": "HGNC:8729",
+      "approved_symbol": "PCNA",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PDIA4",
+      "source_symbol": "PDIA4",
+      "hgnc_id": "HGNC:30167",
+      "approved_symbol": "PDIA4",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PDIA6",
+      "source_symbol": "PDIA6",
+      "hgnc_id": "HGNC:30168",
+      "approved_symbol": "PDIA6",
+      "previous_symbols": [
+        "TXNDC7"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PLK3",
+      "source_symbol": "PLK3",
+      "hgnc_id": "HGNC:2154",
+      "approved_symbol": "PLK3",
+      "previous_symbols": [
+        "CNK"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PMAIP1",
+      "source_symbol": "PMAIP1",
+      "hgnc_id": "HGNC:9108",
+      "approved_symbol": "PMAIP1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PPM1D",
+      "source_symbol": "PPM1D",
+      "hgnc_id": "HGNC:9277",
+      "approved_symbol": "PPM1D",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "PPP1R15A",
+      "source_symbol": "PPP1R15A",
+      "hgnc_id": "HGNC:14375",
+      "approved_symbol": "PPP1R15A",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "RAD51",
+      "source_symbol": "RAD51",
+      "hgnc_id": "HGNC:9817",
+      "approved_symbol": "RAD51",
+      "previous_symbols": [
+        "RAD51A",
+        "RECA"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "RELA",
+      "source_symbol": "RELA",
+      "hgnc_id": "HGNC:9955",
+      "approved_symbol": "RELA",
+      "previous_symbols": [
+        "NFKB3"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "RRM1",
+      "source_symbol": "RRM1",
+      "hgnc_id": "HGNC:10451",
+      "approved_symbol": "RRM1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "RRM2",
+      "source_symbol": "RRM2",
+      "hgnc_id": "HGNC:10452",
+      "approved_symbol": "RRM2",
+      "previous_symbols": [
+        "C2orf48"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "RRM2B",
+      "source_symbol": "RRM2B",
+      "hgnc_id": "HGNC:17296",
+      "approved_symbol": "RRM2B",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "SEC61A1",
+      "source_symbol": "SEC61A1",
+      "hgnc_id": "HGNC:18276",
+      "approved_symbol": "SEC61A1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "SEL1L",
+      "source_symbol": "SEL1L",
+      "hgnc_id": "HGNC:10717",
+      "approved_symbol": "SEL1L",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "SESN1",
+      "source_symbol": "SESN1",
+      "hgnc_id": "HGNC:21595",
+      "approved_symbol": "SESN1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "SLC7A11",
+      "source_symbol": "SLC7A11",
+      "hgnc_id": "HGNC:11059",
+      "approved_symbol": "SLC7A11",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "SLC7A5",
+      "source_symbol": "SLC7A5",
+      "hgnc_id": "HGNC:11063",
+      "approved_symbol": "SLC7A5",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TK1",
+      "source_symbol": "TK1",
+      "hgnc_id": "HGNC:11830",
+      "approved_symbol": "TK1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TNFAIP3",
+      "source_symbol": "TNFAIP3",
+      "hgnc_id": "HGNC:11896",
+      "approved_symbol": "TNFAIP3",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TOP2A",
+      "source_symbol": "TOP2A",
+      "hgnc_id": "HGNC:11989",
+      "approved_symbol": "TOP2A",
+      "previous_symbols": [
+        "TOP2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TOPBP1",
+      "source_symbol": "TOPBP1",
+      "hgnc_id": "HGNC:17008",
+      "approved_symbol": "TOPBP1",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TP53",
+      "source_symbol": "TP53",
+      "hgnc_id": "HGNC:11998",
+      "approved_symbol": "TP53",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TRIB3",
+      "source_symbol": "TRIB3",
+      "hgnc_id": "HGNC:16228",
+      "approved_symbol": "TRIB3",
+      "previous_symbols": [
+        "C20orf97"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "TYMS",
+      "source_symbol": "TYMS",
+      "hgnc_id": "HGNC:12441",
+      "approved_symbol": "TYMS",
+      "previous_symbols": [
+        "TS"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "XBP1",
+      "source_symbol": "XBP1",
+      "hgnc_id": "HGNC:12801",
+      "approved_symbol": "XBP1",
+      "previous_symbols": [
+        "XBP2"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "XPC",
+      "source_symbol": "XPC",
+      "hgnc_id": "HGNC:12816",
+      "approved_symbol": "XPC",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "XRCC5",
+      "source_symbol": "XRCC5",
+      "hgnc_id": "HGNC:12833",
+      "approved_symbol": "XRCC5",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "XRCC6",
+      "source_symbol": "XRCC6",
+      "hgnc_id": "HGNC:4055",
+      "approved_symbol": "XRCC6",
+      "previous_symbols": [
+        "G22P1"
+      ],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    },
+    {
+      "requested_symbol": "ZFP36",
+      "source_symbol": "ZFP36",
+      "hgnc_id": "HGNC:12862",
+      "approved_symbol": "ZFP36",
+      "previous_symbols": [],
+      "resolution": "exact source symbol",
+      "dataset_id": "SrivatsanTrapnell2020_sciplex2"
+    }
+  ]
+}

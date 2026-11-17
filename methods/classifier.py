@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 """Reproduce source-filtered, context-matched single-cell classification.
-
-Supply a normalized score table with --input, or use --rebuild-input with the
-raw H5AD directory and source-cell mapping. All results are written to --output.
-The optional --save-model stores a model fitted to all eligible cells.
+Supply --input scored cells or --rebuild-input with raw H5ADs and source mapping.
+--output selects all results; --save-model also refits the complete-data artifact.
 """
 from __future__ import annotations
 
@@ -31,6 +29,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
 SEED = 20261117
+GENE_IDENTITY_PATH = Path(__file__).with_name("classifier_gene_identity_map.json")
 DDR = set(
     "TP53 CDKN1A MDM2 GADD45A GADD45B GADD45G DDB2 XPC BBC3 BAX PMAIP1 FAS RRM2B SESN1 BTG2 FDXR PLK3 PPM1D ATM ATR CHEK1 CHEK2 BRCA1 BRCA2 RAD51 PARP1 XRCC5 XRCC6 H2AFX MRE11 NBN FANCD2 CLSPN TOPBP1".split()
 )
@@ -107,7 +106,8 @@ def checksum(path):
 
 def build_input(data_root, out, source_mapping):
     mapping = pd.read_csv(source_mapping, low_memory=False)
-    all_cells, coverage, inputs = [], [], []
+    identity_manifest = json.loads(GENE_IDENTITY_PATH.read_text())
+    all_cells, coverage, inputs, identity_rows = [], [], [], []
     for dataset, treatments in TASKS.items():
         path = data_root / f"{dataset}.h5ad"
         print("Extracting", dataset, flush=True)
@@ -153,8 +153,36 @@ def build_input(data_root, out, source_mapping):
             )
             names = list(read_col(genes, gene_key))
             lookup = {g: i for i, g in enumerate(names)}
-            selected = sorted(set().union(*GENE_SETS.values()) & set(names))
-            indices = np.array([lookup[g] for g in selected])
+            # Frozen HGNC approved/previous-symbol mappings cover all predefined
+            # programmes. Each source identity contributes once within a programme.
+            requested = sorted(set().union(*GENE_SETS.values()))
+            symbol_map = identity_manifest["dataset_source_symbol_maps"][dataset]
+            resolved = {}
+            for gene in requested:
+                symbol = gene if gene in lookup else symbol_map.get(gene)
+                if symbol is not None and symbol in lookup:
+                    resolved[gene] = symbol
+                identity_rows.append(
+                    {
+                        "dataset_id": dataset,
+                        "specified_gene": gene,
+                        "source_symbol": resolved.get(gene, ""),
+                        "source_column": (
+                            lookup[resolved[gene]] if gene in resolved else -1
+                        ),
+                    }
+                )
+            selected = sorted(resolved)
+            indices = np.array([lookup[resolved[g]] for g in selected])
+            assert len(indices) == len(
+                set(indices)
+            ), "A source gene cannot contribute twice"
+            target_sources = {resolved[g] for g in DDR if g in resolved}
+            for programme, members in GENE_SETS.items():
+                if programme != "target_DDR":
+                    assert not target_sources.intersection(
+                        resolved[g] for g in members if g in resolved
+                    )
             x = handle["X"]
             shape = tuple(x.attrs["shape"])
             enc = x.attrs["encoding-type"]
@@ -254,6 +282,7 @@ def build_input(data_root, out, source_mapping):
     assert table.sample_id.is_unique
     table.to_csv(out / "scored_cells.csv.gz", index=False, float_format="%.10g")
     pd.DataFrame(coverage).to_csv(out / "gene_sets.csv", index=False)
+    pd.DataFrame(identity_rows).to_csv(out / "gene_identity_mapping.csv", index=False)
     (out / "source_files.json").write_text(json.dumps(inputs, indent=2) + "\n")
     return table
 
@@ -521,7 +550,10 @@ def paired_sensitivity(task_metrics, out):
 
 def held_line_uncertainty(out):
     """Paired line-block resampling of fixed held-out predictions, without refitting."""
-    df = pd.read_csv(out / "held_cell_line_McFarland_predictions.csv.gz")
+    df = pd.read_csv(
+        out / "held_cell_line_McFarland_predictions.csv.gz",
+        float_precision="round_trip",
+    )
     groups = [g.index.to_numpy() for _, g in df.groupby("cell_line", sort=True)]
     y = df.observed.to_numpy()
     estimates = {k: [] for k in FEATURES}
@@ -651,6 +683,7 @@ def main():
             "target_thresholds": cut,
             "normalization": "log1p(10000 * raw_count / total_count), mean over present genes",
             "gene_sets": {k: sorted(v) for k, v in GENE_SETS.items()},
+            "gene_identity_map": json.loads(GENE_IDENTITY_PATH.read_text()),
             "seed": SEED,
             "context_levels": sorted(df.reference_group.unique()),
             "source_QC": "McFarland normal cells, DMSO-only controls matched by source experiment/time/cell line",

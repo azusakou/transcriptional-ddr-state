@@ -19,6 +19,28 @@ SETS = {
     "cycle": "MKI67 TOP2A PCNA MCM2 MCM3 MCM4 MCM5 MCM6 MCM7 CDK1 CCNB1 CCNB2 CCNE1 CCNA2 CDC20 AURKA AURKB".split(),
 }
 GATES = ["negative", "low", "medium", "high"]
+# Stable biological identity, not signature selection: NCBI Gene 4361 / HGNC:7230.
+# The source annotation predates the approved MRE11 symbol.
+GENE_IDENTITIES = json.loads(
+    (Path(__file__).parent / "gene_identity_records.json").read_text()
+)
+
+
+def resolved_markers(markers, genes):
+    available = set(genes)
+    result = {}
+    for g in markers:
+        candidates = sorted(
+            available & set(GENE_IDENTITIES["records"][g]["valid_source_symbols"])
+        )
+        source = (
+            g if g in available else candidates[0] if len(candidates) == 1 else None
+        )
+        if source is not None:
+            result[g] = source
+    if len(set(result.values())) != len(result):
+        raise ValueError("Two markers resolve to one source gene")
+    return result
 
 
 def partial_rank(x, y, covariates):
@@ -134,14 +156,18 @@ def main():
         meta["log_DAPI"] = np.log1p(meta.DAPI_fluorescence)
         coverage = {}
         for name, markers in SETS.items():
-            genes = [g for g in markers if g in counts.index]
+            resolved = resolved_markers(markers, counts.index)
             coverage[name] = {
                 "defined": markers,
-                "present": genes,
-                "missing": [g for g in markers if g not in counts.index],
+                "present": list(resolved),
+                "source_genes": list(resolved.values()),
+                "resolved_source_symbols": {
+                    g: s for g, s in resolved.items() if g != s
+                },
+                "missing": [g for g in markers if g not in resolved],
             }
             meta[name] = np.log1p(
-                1e4 * counts.loc[genes].to_numpy() / total_endog
+                1e4 * counts.loc[list(resolved.values())].to_numpy() / total_endog
             ).mean(axis=0)
         meta["qc_pass"] = (
             (meta.nFeature_RNA > 500)
@@ -174,6 +200,14 @@ def main():
             "matching_unit": "A single index-sorted cell linked by exact column/metadata identifier",
             "replication": "Eight sorting plates; independent culture replication not established",
             "source_FUCCI_per_cell_available": False,
+        }
+        checks["symbol_resolution"] = {
+            "MRE11": "MRE11A",
+            "authority": "NCBI Gene 4361; HGNC:7230",
+            "source_url": "https://www.ncbi.nlm.nih.gov/gene/4361",
+        }
+        checks["gene_identity_authority"] = {
+            k: v for k, v in GENE_IDENTITIES.items() if k != "records"
         }
         checks["source_QC_denominator"] = (
             "MTpercentage was computed in source full library including ERCC spikeins; matrix retains human genes only. MTpercentage_endogenous*(1-ERCCpercentage/100) reproduces source MTpercentage."

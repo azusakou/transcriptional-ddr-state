@@ -5,7 +5,7 @@ Six/24-hour forecasts are averaged equally within cell line and drug before a
 single AUC is attached. All available eligible cell lines are retained.
 """
 from pathlib import Path
-import argparse, json
+import argparse, json, hashlib
 import pandas as pd, numpy as np
 from scipy import stats
 from reanalyse_functional_context import correlation, bh, FEATURE_FILE, HERE
@@ -193,11 +193,10 @@ def main():
     (HERE / "functional_analysis_definitions.json").write_text(
         json.dumps(
             {
-                "model_predictions": (
-                    str(args.predictions.relative_to(HERE.parents[1]))
-                    if args.predictions.is_relative_to(HERE.parents[1])
-                    else str(args.predictions)
-                ),
+                "model_predictions": args.predictions.name,
+                "model_predictions_sha256": hashlib.sha256(
+                    args.predictions.read_bytes()
+                ).hexdigest(),
                 "filter": {
                     "analysis": "composite_z2",
                     "cohort": "time_specific",
@@ -206,7 +205,7 @@ def main():
                 },
                 "aggregation": "equal mean of eligible 6h and 24h predictions within cell line and drug; attach one AUC afterward",
                 "outcome": "original source exact-drug PRISM_AUC; no GDSC/nutlin proxy and no AUC averaging across assays",
-                "forecast_test_family": "secondary four per-drug predicted-DDR vs PRISM AUC Spearman associations; two-sided 9999 within-drug line permutations, BH correction across four",
+                "primary_test_family": "four per-drug predicted-DDR vs PRISM AUC Spearman associations; two-sided 9999 within-drug line permutations, BH correction across four",
                 "diagnostic_family": "all sixteen observed/predicted model-outcome tests; BH across sixteen also reported",
                 "uncertainty": "4000 line-bootstrap resamples of paired frozen predictions and AUC; conditional on fitted models",
                 "genotype": "original source TP53 damaging/hotspot binary annotations; not used to fit forecasts",

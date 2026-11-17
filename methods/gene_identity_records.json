@@ -1,0 +1,899 @@
+{
+  "source_url": "https://storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt",
+  "official_download_documentation": "https://www.genenames.org/download/archive/",
+  "retrieval_date": "2026-11-17",
+  "source_table_sha256": "6df77ac3cbaeb86a6dce5e17d851ebb27b6b3cdcd2471a211a3d8464f00c54c4",
+  "policy": "Exact source symbol first; otherwise require one HGNC approved/previous-symbol identity and exactly one matching source column. Synonym-only aliases, homologs and ambiguous matches are not substituted; marker memberships and weights unchanged.",
+  "records": {
+    "ASNS": {
+      "hgnc_id": "HGNC:753",
+      "approved_symbol": "ASNS",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "ASNS"
+      ]
+    },
+    "ATF3": {
+      "hgnc_id": "HGNC:785",
+      "approved_symbol": "ATF3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "ATF3"
+      ]
+    },
+    "ATF4": {
+      "hgnc_id": "HGNC:786",
+      "approved_symbol": "ATF4",
+      "previous_symbols": [
+        "TXREB"
+      ],
+      "valid_source_symbols": [
+        "ATF4",
+        "TXREB"
+      ]
+    },
+    "ATF6": {
+      "hgnc_id": "HGNC:791",
+      "approved_symbol": "ATF6",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "ATF6"
+      ]
+    },
+    "ATM": {
+      "hgnc_id": "HGNC:795",
+      "approved_symbol": "ATM",
+      "previous_symbols": [
+        "ATA",
+        "ATDC",
+        "ATC",
+        "ATD"
+      ],
+      "valid_source_symbols": [
+        "ATM",
+        "ATA",
+        "ATDC",
+        "ATC",
+        "ATD"
+      ]
+    },
+    "ATR": {
+      "hgnc_id": "HGNC:882",
+      "approved_symbol": "ATR",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "ATR"
+      ]
+    },
+    "AURKA": {
+      "hgnc_id": "HGNC:11393",
+      "approved_symbol": "AURKA",
+      "previous_symbols": [
+        "STK15",
+        "STK6"
+      ],
+      "valid_source_symbols": [
+        "AURKA",
+        "STK15",
+        "STK6"
+      ]
+    },
+    "AURKB": {
+      "hgnc_id": "HGNC:11390",
+      "approved_symbol": "AURKB",
+      "previous_symbols": [
+        "STK12"
+      ],
+      "valid_source_symbols": [
+        "AURKB",
+        "STK12"
+      ]
+    },
+    "BAX": {
+      "hgnc_id": "HGNC:959",
+      "approved_symbol": "BAX",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "BAX"
+      ]
+    },
+    "BBC3": {
+      "hgnc_id": "HGNC:17868",
+      "approved_symbol": "BBC3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "BBC3"
+      ]
+    },
+    "BRCA1": {
+      "hgnc_id": "HGNC:1100",
+      "approved_symbol": "BRCA1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "BRCA1"
+      ]
+    },
+    "BRCA2": {
+      "hgnc_id": "HGNC:1101",
+      "approved_symbol": "BRCA2",
+      "previous_symbols": [
+        "FANCD1",
+        "FACD",
+        "FANCD"
+      ],
+      "valid_source_symbols": [
+        "BRCA2",
+        "FANCD1"
+      ]
+    },
+    "BTG2": {
+      "hgnc_id": "HGNC:1131",
+      "approved_symbol": "BTG2",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "BTG2"
+      ]
+    },
+    "CCNA2": {
+      "hgnc_id": "HGNC:1578",
+      "approved_symbol": "CCNA2",
+      "previous_symbols": [
+        "CCNA",
+        "CCN1"
+      ],
+      "valid_source_symbols": [
+        "CCNA2",
+        "CCNA"
+      ]
+    },
+    "CCNB1": {
+      "hgnc_id": "HGNC:1579",
+      "approved_symbol": "CCNB1",
+      "previous_symbols": [
+        "CCNB"
+      ],
+      "valid_source_symbols": [
+        "CCNB1",
+        "CCNB"
+      ]
+    },
+    "CCNB2": {
+      "hgnc_id": "HGNC:1580",
+      "approved_symbol": "CCNB2",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "CCNB2"
+      ]
+    },
+    "CCNE1": {
+      "hgnc_id": "HGNC:1589",
+      "approved_symbol": "CCNE1",
+      "previous_symbols": [
+        "CCNE"
+      ],
+      "valid_source_symbols": [
+        "CCNE1",
+        "CCNE"
+      ]
+    },
+    "CDC20": {
+      "hgnc_id": "HGNC:1723",
+      "approved_symbol": "CDC20",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "CDC20"
+      ]
+    },
+    "CDC6": {
+      "hgnc_id": "HGNC:1744",
+      "approved_symbol": "CDC6",
+      "previous_symbols": [
+        "CDC18L"
+      ],
+      "valid_source_symbols": [
+        "CDC6",
+        "CDC18L"
+      ]
+    },
+    "CDK1": {
+      "hgnc_id": "HGNC:1722",
+      "approved_symbol": "CDK1",
+      "previous_symbols": [
+        "CDC2"
+      ],
+      "valid_source_symbols": [
+        "CDK1",
+        "CDC2"
+      ]
+    },
+    "CDK2": {
+      "hgnc_id": "HGNC:1771",
+      "approved_symbol": "CDK2",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "CDK2"
+      ]
+    },
+    "CDKN1A": {
+      "hgnc_id": "HGNC:1784",
+      "approved_symbol": "CDKN1A",
+      "previous_symbols": [
+        "CDKN1"
+      ],
+      "valid_source_symbols": [
+        "CDKN1A",
+        "CDKN1"
+      ]
+    },
+    "CEBPB": {
+      "hgnc_id": "HGNC:1834",
+      "approved_symbol": "CEBPB",
+      "previous_symbols": [
+        "TCF5"
+      ],
+      "valid_source_symbols": [
+        "CEBPB",
+        "TCF5"
+      ]
+    },
+    "CEBPG": {
+      "hgnc_id": "HGNC:1837",
+      "approved_symbol": "CEBPG",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "CEBPG"
+      ]
+    },
+    "CHEK1": {
+      "hgnc_id": "HGNC:1925",
+      "approved_symbol": "CHEK1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "CHEK1"
+      ]
+    },
+    "CHEK2": {
+      "hgnc_id": "HGNC:16627",
+      "approved_symbol": "CHEK2",
+      "previous_symbols": [
+        "RAD53"
+      ],
+      "valid_source_symbols": [
+        "CHEK2",
+        "RAD53"
+      ]
+    },
+    "CLSPN": {
+      "hgnc_id": "HGNC:19715",
+      "approved_symbol": "CLSPN",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "CLSPN"
+      ]
+    },
+    "DDB2": {
+      "hgnc_id": "HGNC:2718",
+      "approved_symbol": "DDB2",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "DDB2"
+      ]
+    },
+    "DDIT3": {
+      "hgnc_id": "HGNC:2726",
+      "approved_symbol": "DDIT3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "DDIT3"
+      ]
+    },
+    "DNAJB1": {
+      "hgnc_id": "HGNC:5270",
+      "approved_symbol": "DNAJB1",
+      "previous_symbols": [
+        "HSPF1"
+      ],
+      "valid_source_symbols": [
+        "DNAJB1",
+        "HSPF1"
+      ]
+    },
+    "DNAJB9": {
+      "hgnc_id": "HGNC:6968",
+      "approved_symbol": "DNAJB9",
+      "previous_symbols": [
+        "MDG1"
+      ],
+      "valid_source_symbols": [
+        "DNAJB9",
+        "MDG1"
+      ]
+    },
+    "DNAJC3": {
+      "hgnc_id": "HGNC:9439",
+      "approved_symbol": "DNAJC3",
+      "previous_symbols": [
+        "PRKRI"
+      ],
+      "valid_source_symbols": [
+        "DNAJC3",
+        "PRKRI"
+      ]
+    },
+    "E2F1": {
+      "hgnc_id": "HGNC:3113",
+      "approved_symbol": "E2F1",
+      "previous_symbols": [
+        "RBBP3"
+      ],
+      "valid_source_symbols": [
+        "E2F1",
+        "RBBP3"
+      ]
+    },
+    "E2F2": {
+      "hgnc_id": "HGNC:3114",
+      "approved_symbol": "E2F2",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "E2F2"
+      ]
+    },
+    "E2F3": {
+      "hgnc_id": "HGNC:3115",
+      "approved_symbol": "E2F3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "E2F3"
+      ]
+    },
+    "EDEM1": {
+      "hgnc_id": "HGNC:18967",
+      "approved_symbol": "EDEM1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "EDEM1"
+      ]
+    },
+    "EGR1": {
+      "hgnc_id": "HGNC:3238",
+      "approved_symbol": "EGR1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "EGR1"
+      ]
+    },
+    "EIF2AK3": {
+      "hgnc_id": "HGNC:3255",
+      "approved_symbol": "EIF2AK3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "EIF2AK3"
+      ]
+    },
+    "ERN1": {
+      "hgnc_id": "HGNC:3449",
+      "approved_symbol": "ERN1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "ERN1"
+      ]
+    },
+    "FANCD2": {
+      "hgnc_id": "HGNC:3585",
+      "approved_symbol": "FANCD2",
+      "previous_symbols": [
+        "FACD",
+        "FANCD"
+      ],
+      "valid_source_symbols": [
+        "FANCD2"
+      ]
+    },
+    "FAS": {
+      "hgnc_id": "HGNC:11920",
+      "approved_symbol": "FAS",
+      "previous_symbols": [
+        "FAS1",
+        "APT1",
+        "TNFRSF6"
+      ],
+      "valid_source_symbols": [
+        "FAS",
+        "FAS1",
+        "APT1",
+        "TNFRSF6"
+      ]
+    },
+    "FDXR": {
+      "hgnc_id": "HGNC:3642",
+      "approved_symbol": "FDXR",
+      "previous_symbols": [
+        "ADXR"
+      ],
+      "valid_source_symbols": [
+        "FDXR",
+        "ADXR"
+      ]
+    },
+    "FOS": {
+      "hgnc_id": "HGNC:3796",
+      "approved_symbol": "FOS",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "FOS"
+      ]
+    },
+    "GADD45A": {
+      "hgnc_id": "HGNC:4095",
+      "approved_symbol": "GADD45A",
+      "previous_symbols": [
+        "DDIT1"
+      ],
+      "valid_source_symbols": [
+        "GADD45A",
+        "DDIT1"
+      ]
+    },
+    "GADD45B": {
+      "hgnc_id": "HGNC:4096",
+      "approved_symbol": "GADD45B",
+      "previous_symbols": [
+        "MYD118"
+      ],
+      "valid_source_symbols": [
+        "GADD45B",
+        "MYD118"
+      ]
+    },
+    "GADD45G": {
+      "hgnc_id": "HGNC:4097",
+      "approved_symbol": "GADD45G",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "GADD45G"
+      ]
+    },
+    "H2AFX": {
+      "hgnc_id": "HGNC:4739",
+      "approved_symbol": "H2AX",
+      "previous_symbols": [
+        "H2AFX"
+      ],
+      "valid_source_symbols": [
+        "H2AX",
+        "H2AFX"
+      ]
+    },
+    "HERPUD1": {
+      "hgnc_id": "HGNC:13744",
+      "approved_symbol": "HERPUD1",
+      "previous_symbols": [
+        "HERPUD1-IT1"
+      ],
+      "valid_source_symbols": [
+        "HERPUD1",
+        "HERPUD1-IT1"
+      ]
+    },
+    "HMOX1": {
+      "hgnc_id": "HGNC:5013",
+      "approved_symbol": "HMOX1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "HMOX1"
+      ]
+    },
+    "HSP90AA1": {
+      "hgnc_id": "HGNC:5253",
+      "approved_symbol": "HSP90AA1",
+      "previous_symbols": [
+        "HSPC1",
+        "HSPCA",
+        "HSPCAL4"
+      ],
+      "valid_source_symbols": [
+        "HSP90AA1",
+        "HSPC1",
+        "HSPCA",
+        "HSPCAL4"
+      ]
+    },
+    "HSPA1A": {
+      "hgnc_id": "HGNC:5232",
+      "approved_symbol": "HSPA1A",
+      "previous_symbols": [
+        "HSPA1"
+      ],
+      "valid_source_symbols": [
+        "HSPA1A",
+        "HSPA1"
+      ]
+    },
+    "HSPA1B": {
+      "hgnc_id": "HGNC:5233",
+      "approved_symbol": "HSPA1B",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "HSPA1B"
+      ]
+    },
+    "HSPA5": {
+      "hgnc_id": "HGNC:5238",
+      "approved_symbol": "HSPA5",
+      "previous_symbols": [
+        "GRP78"
+      ],
+      "valid_source_symbols": [
+        "HSPA5",
+        "GRP78"
+      ]
+    },
+    "IER3": {
+      "hgnc_id": "HGNC:5392",
+      "approved_symbol": "IER3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "IER3"
+      ]
+    },
+    "JUN": {
+      "hgnc_id": "HGNC:6204",
+      "approved_symbol": "JUN",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "JUN"
+      ]
+    },
+    "MCM2": {
+      "hgnc_id": "HGNC:6944",
+      "approved_symbol": "MCM2",
+      "previous_symbols": [
+        "CCNL1",
+        "CDCL1"
+      ],
+      "valid_source_symbols": [
+        "MCM2",
+        "CDCL1"
+      ]
+    },
+    "MCM3": {
+      "hgnc_id": "HGNC:6945",
+      "approved_symbol": "MCM3",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "MCM3"
+      ]
+    },
+    "MCM4": {
+      "hgnc_id": "HGNC:6947",
+      "approved_symbol": "MCM4",
+      "previous_symbols": [
+        "CDC21"
+      ],
+      "valid_source_symbols": [
+        "MCM4",
+        "CDC21"
+      ]
+    },
+    "MCM5": {
+      "hgnc_id": "HGNC:6948",
+      "approved_symbol": "MCM5",
+      "previous_symbols": [
+        "CDC46"
+      ],
+      "valid_source_symbols": [
+        "MCM5",
+        "CDC46"
+      ]
+    },
+    "MCM6": {
+      "hgnc_id": "HGNC:6949",
+      "approved_symbol": "MCM6",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "MCM6"
+      ]
+    },
+    "MCM7": {
+      "hgnc_id": "HGNC:6950",
+      "approved_symbol": "MCM7",
+      "previous_symbols": [
+        "MCM2"
+      ],
+      "valid_source_symbols": [
+        "MCM7"
+      ]
+    },
+    "MDM2": {
+      "hgnc_id": "HGNC:6973",
+      "approved_symbol": "MDM2",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "MDM2"
+      ]
+    },
+    "MKI67": {
+      "hgnc_id": "HGNC:7107",
+      "approved_symbol": "MKI67",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "MKI67"
+      ]
+    },
+    "MRE11": {
+      "hgnc_id": "HGNC:7230",
+      "approved_symbol": "MRE11",
+      "previous_symbols": [
+        "MRE11A"
+      ],
+      "valid_source_symbols": [
+        "MRE11",
+        "MRE11A"
+      ]
+    },
+    "NBN": {
+      "hgnc_id": "HGNC:7652",
+      "approved_symbol": "NBN",
+      "previous_symbols": [
+        "NBS",
+        "NBS1"
+      ],
+      "valid_source_symbols": [
+        "NBN",
+        "NBS",
+        "NBS1"
+      ]
+    },
+    "PARP1": {
+      "hgnc_id": "HGNC:270",
+      "approved_symbol": "PARP1",
+      "previous_symbols": [
+        "PPOL",
+        "ADPRT"
+      ],
+      "valid_source_symbols": [
+        "PARP1",
+        "PPOL",
+        "ADPRT"
+      ]
+    },
+    "PCNA": {
+      "hgnc_id": "HGNC:8729",
+      "approved_symbol": "PCNA",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "PCNA"
+      ]
+    },
+    "PDIA4": {
+      "hgnc_id": "HGNC:30167",
+      "approved_symbol": "PDIA4",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "PDIA4"
+      ]
+    },
+    "PDIA6": {
+      "hgnc_id": "HGNC:30168",
+      "approved_symbol": "PDIA6",
+      "previous_symbols": [
+        "TXNDC7"
+      ],
+      "valid_source_symbols": [
+        "PDIA6",
+        "TXNDC7"
+      ]
+    },
+    "PLK3": {
+      "hgnc_id": "HGNC:2154",
+      "approved_symbol": "PLK3",
+      "previous_symbols": [
+        "CNK"
+      ],
+      "valid_source_symbols": [
+        "PLK3",
+        "CNK"
+      ]
+    },
+    "PMAIP1": {
+      "hgnc_id": "HGNC:9108",
+      "approved_symbol": "PMAIP1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "PMAIP1"
+      ]
+    },
+    "PPM1D": {
+      "hgnc_id": "HGNC:9277",
+      "approved_symbol": "PPM1D",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "PPM1D"
+      ]
+    },
+    "PPP1R15A": {
+      "hgnc_id": "HGNC:14375",
+      "approved_symbol": "PPP1R15A",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "PPP1R15A"
+      ]
+    },
+    "RAD51": {
+      "hgnc_id": "HGNC:9817",
+      "approved_symbol": "RAD51",
+      "previous_symbols": [
+        "RAD51A",
+        "RECA"
+      ],
+      "valid_source_symbols": [
+        "RAD51",
+        "RAD51A",
+        "RECA"
+      ]
+    },
+    "RRM1": {
+      "hgnc_id": "HGNC:10451",
+      "approved_symbol": "RRM1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "RRM1"
+      ]
+    },
+    "RRM2": {
+      "hgnc_id": "HGNC:10452",
+      "approved_symbol": "RRM2",
+      "previous_symbols": [
+        "C2orf48"
+      ],
+      "valid_source_symbols": [
+        "RRM2",
+        "C2orf48"
+      ]
+    },
+    "RRM2B": {
+      "hgnc_id": "HGNC:17296",
+      "approved_symbol": "RRM2B",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "RRM2B"
+      ]
+    },
+    "SEC61A1": {
+      "hgnc_id": "HGNC:18276",
+      "approved_symbol": "SEC61A1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "SEC61A1"
+      ]
+    },
+    "SEL1L": {
+      "hgnc_id": "HGNC:10717",
+      "approved_symbol": "SEL1L",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "SEL1L"
+      ]
+    },
+    "SESN1": {
+      "hgnc_id": "HGNC:21595",
+      "approved_symbol": "SESN1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "SESN1"
+      ]
+    },
+    "SLC7A11": {
+      "hgnc_id": "HGNC:11059",
+      "approved_symbol": "SLC7A11",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "SLC7A11"
+      ]
+    },
+    "SLC7A5": {
+      "hgnc_id": "HGNC:11063",
+      "approved_symbol": "SLC7A5",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "SLC7A5"
+      ]
+    },
+    "TK1": {
+      "hgnc_id": "HGNC:11830",
+      "approved_symbol": "TK1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "TK1"
+      ]
+    },
+    "TOP2A": {
+      "hgnc_id": "HGNC:11989",
+      "approved_symbol": "TOP2A",
+      "previous_symbols": [
+        "TOP2"
+      ],
+      "valid_source_symbols": [
+        "TOP2A",
+        "TOP2"
+      ]
+    },
+    "TOPBP1": {
+      "hgnc_id": "HGNC:17008",
+      "approved_symbol": "TOPBP1",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "TOPBP1"
+      ]
+    },
+    "TP53": {
+      "hgnc_id": "HGNC:11998",
+      "approved_symbol": "TP53",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "TP53"
+      ]
+    },
+    "TRIB3": {
+      "hgnc_id": "HGNC:16228",
+      "approved_symbol": "TRIB3",
+      "previous_symbols": [
+        "C20orf97"
+      ],
+      "valid_source_symbols": [
+        "TRIB3",
+        "C20orf97"
+      ]
+    },
+    "TYMS": {
+      "hgnc_id": "HGNC:12441",
+      "approved_symbol": "TYMS",
+      "previous_symbols": [
+        "TS"
+      ],
+      "valid_source_symbols": [
+        "TYMS",
+        "TS"
+      ]
+    },
+    "XBP1": {
+      "hgnc_id": "HGNC:12801",
+      "approved_symbol": "XBP1",
+      "previous_symbols": [
+        "XBP2"
+      ],
+      "valid_source_symbols": [
+        "XBP1",
+        "XBP2"
+      ]
+    },
+    "XPC": {
+      "hgnc_id": "HGNC:12816",
+      "approved_symbol": "XPC",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "XPC"
+      ]
+    },
+    "XRCC5": {
+      "hgnc_id": "HGNC:12833",
+      "approved_symbol": "XRCC5",
+      "previous_symbols": [],
+      "valid_source_symbols": [
+        "XRCC5"
+      ]
+    },
+    "XRCC6": {
+      "hgnc_id": "HGNC:4055",
+      "approved_symbol": "XRCC6",
+      "previous_symbols": [
+        "G22P1"
+      ],
+      "valid_source_symbols": [
+        "XRCC6",
+        "G22P1"
+      ]
+    }
+  }
+}

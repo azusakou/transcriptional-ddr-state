@@ -24,6 +24,28 @@ MODULES = {
     "ATF4_integrated_stress": "ATF4 DDIT3 ASNS TRIB3 SLC7A5 SLC7A11 HERPUD1 CEBPB CEBPG PPP1R15A DNAJC3 HSPA5".split(),
     "XBP1_UPR": "XBP1 ERN1 ATF6 HSPA5 DNAJB9 HERPUD1 PDIA4 PDIA6 EDEM1 SEC61A1 SEL1L".split(),
 }
+GENE_IDENTITIES = json.loads(
+    (Path(__file__).parent / "gene_identity_records.json").read_text()
+)
+
+
+def resolved_markers(markers, genes):
+    available = set(genes)
+    result = {}
+    for g in markers:
+        candidates = sorted(
+            available & set(GENE_IDENTITIES["records"][g]["valid_source_symbols"])
+        )
+        source = (
+            g if g in available else candidates[0] if len(candidates) == 1 else None
+        )
+        if source is not None:
+            result[g] = source
+    if len(set(result.values())) != len(result):
+        raise ValueError("Two fixed markers resolve to one source gene")
+    return result
+
+
 IR_MAP = {
     "GSM4331191": ("WT", "UT", "GSM4331191"),
     "GSM4331192": ("WT", "IR_5Gy_4h", "GSM4331192"),
@@ -66,7 +88,9 @@ def score_matrix(matrix, genes):
     return pd.DataFrame(
         {
             name: np.asarray(
-                matrix[[lookup[g] for g in markers if g in lookup]].mean(axis=0)
+                matrix[
+                    [lookup[g] for g in resolved_markers(markers, genes).values()]
+                ].mean(axis=0)
             ).ravel()
             for name, markers in MODULES.items()
         }
@@ -80,7 +104,12 @@ def score_h5(path):
         genes = list(column(f["var"], key))
         x = f["X"]
         indices = {g: i for i, g in enumerate(genes)}
-        wanted = sorted(set(sum(MODULES.values(), [])) & set(genes))
+        resolved = {
+            name: resolved_markers(markers, genes) for name, markers in MODULES.items()
+        }
+        wanted = sorted(
+            set(source for markers in resolved.values() for source in markers.values())
+        )
         positions = [indices[g] for g in wanted]
         shape = tuple(x.attrs["shape"])
         if decode(x.attrs["encoding-type"]) == "csc_matrix":
@@ -98,7 +127,7 @@ def score_h5(path):
             * (1e4 / np.maximum(pd.to_numeric(o.ncounts).to_numpy(float), 1))[:, None]
         )
         for name, markers in MODULES.items():
-            o[name] = vals[:, [wanted.index(g) for g in markers if g in wanted]].mean(
+            o[name] = vals[:, [wanted.index(g) for g in resolved[name].values()]].mean(
                 axis=1
             )
         o["source_row"] = np.arange(len(o))
@@ -248,37 +277,86 @@ def external(data, out):
 
 
 def chemical(data, out):
-    ds = "SrivatsanTrapnell2020_sciplex2"
-    o = score_h5(data / "datasets" / "scperturb" / (ds + ".h5ad"))
-    o = o[o.perturbation.isin(["Nutlin", "SAHA"])].copy()
-    control_mask = pd.to_numeric(o.dose_value, errors="coerce") == 0
-    refs, wells = [], []
-    for module in MODULES:
-        center, scale = reference(o.loc[control_mask, module].to_numpy())
-        o[module + "_high"] = (o[module] - center) / (scale + 1e-8) > 2
-        refs.append(
-            dict(
-                dataset_id=ds,
-                module=module,
-                center=center,
-                scale=scale,
-                n_reference_cells=int(control_mask.sum()),
-            )
-        )
-    for (drug, dose, well), g in o.groupby(["perturbation", "dose_value", "well"]):
+    summaries, lines, wells, refs = [], [], [], []
+    for ds in ["McFarlandTsherniak2020", "SrivatsanTrapnell2020_sciplex2"]:
+        o = score_h5(data / "datasets" / "scperturb" / (ds + ".h5ad"))
+        if ds.startswith("McFarland"):
+            o = o[pd.to_numeric(o.time, errors="coerce") == 24].copy()
+            control_mask = o.perturbation == "control"
+        else:
+            o = o[o.perturbation.isin(["Nutlin", "SAHA"])].copy()
+            control_mask = pd.to_numeric(o.dose_value, errors="coerce") == 0
         for module in MODULES:
-            wells.append(
+            center, scale = reference(o.loc[control_mask, module].to_numpy())
+            o[module + "_high"] = (o[module] - center) / (scale + 1e-8) > 2
+            refs.append(
                 dict(
                     dataset_id=ds,
-                    drug=drug,
-                    dose_uM=float(dose),
-                    hash_well=well,
                     module=module,
-                    n_cells=len(g),
-                    mean_score=g[module].mean(),
-                    fraction_z2=g[module + "_high"].mean(),
+                    center=center,
+                    scale=scale,
+                    n_reference_cells=int(control_mask.sum()),
                 )
             )
+        if ds.startswith("McFarland"):
+            drugs = ["Gemcitabine", "Idasanutlin", "Prexasertib", "Bortezomib"]
+            for drug in drugs:
+                for cl, t in o[o.perturbation == drug].groupby("cell_line"):
+                    b = o[control_mask & (o.cell_line == cl)]
+                    if len(b) < 20 or len(t) < 10:
+                        continue
+                    for module in MODULES:
+                        lines.append(
+                            dict(
+                                dataset_id=ds,
+                                drug=drug,
+                                cell_line=cl,
+                                module=module,
+                                n_control=len(b),
+                                n_treated=len(t),
+                                delta_mean_score=t[module].mean() - b[module].mean(),
+                                delta_fraction_z2=t[module + "_high"].mean()
+                                - b[module + "_high"].mean(),
+                            )
+                        )
+            for drug, g in pd.DataFrame(lines).groupby("drug"):
+                for module, h in g.groupby("module"):
+                    x = h.delta_fraction_z2.to_numpy()
+                    rng = np.random.default_rng(20261117)
+                    boot = np.mean(rng.choice(x, (2000, len(x)), replace=True), axis=1)
+                    summaries.append(
+                        dict(
+                            dataset_id=ds,
+                            drug=drug,
+                            module=module,
+                            n_cell_lines=len(h),
+                            mean_delta_fraction_z2=x.mean(),
+                            n_control_cells=int(h.n_control.sum()),
+                            n_treated_cells=int(h.n_treated.sum()),
+                            ci_low=np.percentile(boot, 2.5),
+                            ci_high=np.percentile(boot, 97.5),
+                            uncertainty_unit="cell-line block, not biological experiments",
+                        )
+                    )
+        else:
+            for (drug, dose, well), g in o.groupby(
+                ["perturbation", "dose_value", "well"]
+            ):
+                for module in MODULES:
+                    wells.append(
+                        dict(
+                            dataset_id=ds,
+                            drug=drug,
+                            dose_uM=float(dose),
+                            hash_well=well,
+                            module=module,
+                            n_cells=len(g),
+                            mean_score=g[module].mean(),
+                            fraction_z2=g[module + "_high"].mean(),
+                        )
+                    )
+    pd.DataFrame(lines).to_csv(out / "chemical_cell_line_effects.csv", index=False)
+    pd.DataFrame(summaries).to_csv(out / "chemical_cell_line_summary.csv", index=False)
     wells = pd.DataFrame(wells)
     wells.to_csv(out / "sciplex_hash_well_scores.csv", index=False)
     dose = []
@@ -309,16 +387,16 @@ def chemical(data, out):
             {
                 "normalization": "log1p(10000 * count / library_total)",
                 "discovery_library_total": "obs.ncounts; verified equal to X row sums for both chemical datasets",
-                "chemical_control_thresholds": "pooled dose-zero Nutlin and SAHA sci-Plex2; source-matched McFarland analyses are supplied separately",
+                "chemical_control_thresholds": "pooled 24h McFarland untreated; pooled dose-zero Nutlin and SAHA sci-Plex2",
                 "chemical_fraction_threshold": "control median + 2 * 1.4826 * MAD; SD fallback for zero MAD",
-                "chemical_inclusion": "sci-Plex2 Nutlin and SAHA; compound-specific zero-dose controls",
-                "chemical_effect_summary": "McFarland contrasts are supplied by source_context/reanalyse_functional_context.py",
+                "chemical_inclusion": "McFarland 24h only, >=20 control cells and >=10 treated cells per cell line and drug",
+                "chemical_effect_summary": "unweighted mean across eligible cell lines; 2000 cell-line bootstrap draws; not experiment-level replication",
                 "sciplex_effect_summary": "unweighted hash-well means at each dose versus same-compound dose-zero hash-well mean; no inferential interval",
                 "external_reference": "one shared untreated/EV control distribution per GEO dataset; no within-sample standardization",
                 "GSE145700_comparisons": "two unpaired IR libraries per genotype compared separately with equal-library control mean; no validated pairing identifiers",
                 "imaging_reference": "one field of view; exact frame and coordinate linkage; endpoint at Fiji slice114",
                 "imaging_inclusion": ">=5 live-object-matched frames; endpoint is not counted as a live frame",
-                "imaging_inference": "descriptive correlations only; observation-count-adjusted rank correlation is Pearson correlation of rank residuals after linear adjustment for ranked number of live frames",
+                "imaging_inference": "descriptive correlations only; duration-adjusted rank correlation is Pearson correlation of rank residuals after linear adjustment for ranked number of live frames",
                 "module_genes": MODULES,
             },
             indent=2,
@@ -517,11 +595,7 @@ def inventory(data, out):
                     else (
                         "classification and dose summaries"
                         if path.stem == "SrivatsanTrapnell2020_sciplex2"
-                        else (
-                            "genetic perturbation context"
-                            if path.stem == "ReplogleWeissman2022_rpe1"
-                            else "compendium description only"
-                        )
+                        else "compendium description only"
                     )
                 ),
             )

@@ -1,7 +1,7 @@
 {
   "archive": "processed.zip",
-  "archive_sha256": "e01d03a2e4e9050fafaf6f8f1f0b5a7835c1de210e0a2bf8a3ad1f432977e762",
-  "n_files": 93,
+  "archive_sha256": "5ebc332f90958600d07c101ff04414d0b422e3815f7ff9f3a3b4f428f69ebd45",
+  "n_files": 98,
   "description": "Minimal processed inputs, held-out predictions, fold/threshold/model audit records, figure inputs and original-source provenance. Metrics and plots are regenerated; no raw expression matrices. The fitted RF artifact is stored separately.",
   "files": [
     {
@@ -10,49 +10,54 @@
       "sha256": "88b87a9b6b68bdc6e04312e31160e11fc66f3727c0324f2e427882af6c8cf7ae"
     },
     {
+      "path": "classifier/gene_identity_mapping.csv",
+      "bytes": 10194,
+      "sha256": "ab68293020db47fa007d37521828b558799a6f4b5992d9544ef55ad1c6b4327c"
+    },
+    {
       "path": "classifier/gene_sets.csv",
-      "bytes": 2617,
-      "sha256": "ab2fccd4397b5af4fbc9e693fea82bc1ca1cb70b57908690116d3d95ffb7b799"
+      "bytes": 2629,
+      "sha256": "dbe2315263b1b6ae4e98281b6965ea93e19da7fce64b7a6536dc357f50cd4a03"
     },
     {
       "path": "classifier/grouped_permutation_importance_by_task.csv",
-      "bytes": 1790,
-      "sha256": "d055c1e74c3f971e3753fc36089f4e7dc361952ab4c6dad7f6b03b776160e0fa"
+      "bytes": 1800,
+      "sha256": "4a6a3a01fa7497c34c9ec74c8c9e095328dc75f3ddd6425ab48984913a43858e"
     },
     {
       "path": "classifier/held_cell_line_McFarland_fold_membership.csv.gz",
       "bytes": 189882,
-      "sha256": "5cfbe62624d5d71030b003247bb199026c08b18f73a40c56d0d3e4c1db04c174"
+      "sha256": "c0b5a0bc03f2a74a1de98e9d27a712ddc742d7e4f9e494467d30abfb68514686"
     },
     {
       "path": "classifier/held_cell_line_McFarland_predictions.csv.gz",
-      "bytes": 959777,
-      "sha256": "a59d2686b87527b4c9e5b14065d8055ac9eceb423e97614c90940bc8f7a0d956"
+      "bytes": 960157,
+      "sha256": "d6b9da3fceb19960e51da43211c0bdd5051e596b4cf806cbb1aefef0d4c67381"
     },
     {
       "path": "classifier/held_cell_line_McFarland_thresholds.csv",
-      "bytes": 1652,
-      "sha256": "ad6d5ae3b4462f6dea4439d9a22f01380c10fd79bd20d16d68c5d0e6d8bdd9f7"
+      "bytes": 1663,
+      "sha256": "b409203414c4674c9d87dc63ac15bb775eb3a7ef47b4e7f82f61e09c2ad42132"
     },
     {
       "path": "classifier/leave_task_out_fold_membership.csv.gz",
       "bytes": 234803,
-      "sha256": "0315a078dabb01bc7a39bad1e07a2888544462082f4c7c19230b2d21f6aa37cf"
+      "sha256": "e9cc302234eadc7cbde2a70860be99291a9c30efb2d8526901fa5096ff41c59c"
     },
     {
       "path": "classifier/leave_task_out_predictions.csv.gz",
-      "bytes": 1346558,
-      "sha256": "a8baeee1d5b87df4876e08930d1646bccb4626470a55607dfe2d322a9db59f06"
+      "bytes": 1344213,
+      "sha256": "19c50b1d6cbf81a6200cd52ab550fb088f8c540fca28e744993101227da17bf1"
     },
     {
       "path": "classifier/leave_task_out_thresholds.csv",
-      "bytes": 3127,
-      "sha256": "34678625b4b165d3ea1d37ea13ead7fcb6e7f1227af693ea94ed309f20f0f5b7"
+      "bytes": 3131,
+      "sha256": "39a426b8372a901573585773ecf348bad37de66522d3bdea5699ed330e268808"
     },
     {
       "path": "classifier/scored_cells.csv.gz",
-      "bytes": 3129943,
-      "sha256": "58de46a02caf05a1f6b55fba45c3ab3a3076294f0b72e2b4217935ec9cb2a1b8"
+      "bytes": 3131385,
+      "sha256": "c847d82207c2cae4e087975ae368bb0cdb62e0f018a9c93f6a67dcd7119919d2"
     },
     {
       "path": "classifier/software_versions.json",
@@ -66,18 +71,18 @@
     },
     {
       "path": "direct_damage/README.txt",
-      "bytes": 3550,
-      "sha256": "b98d49571a8e340509ba463335ca0b347ec8a0d38404d56ece7b10fc5de2e024"
+      "bytes": 4208,
+      "sha256": "37206ba91bfff4ddcd80dd8b46ed070d6f388eea9726fd3ea789acb443306908"
     },
     {
       "path": "direct_damage/all_scored_cells.csv.gz",
-      "bytes": 351412,
-      "sha256": "e85a739071527c51dfefc77d62ed2d73c797ae39c4ebacbdc5b217f11104bcc7"
+      "bytes": 351453,
+      "sha256": "c2cf4575e6bb71cda810ba989cbfd249bbd5df334764d7f6ef9f2a60e54abe35"
     },
     {
       "path": "direct_damage/checks_and_definitions.json",
-      "bytes": 1938,
-      "sha256": "aa63de93f1d43bdafdd227340990edeb818e11d21f3f4bf512df6408c7b217a1"
+      "bytes": 2718,
+      "sha256": "658a69823d551f871fa3180fc99c29a5d188b88625218cced8c39a460d132562"
     },
     {
       "path": "direct_damage/citation.bib",
@@ -86,8 +91,8 @@
     },
     {
       "path": "direct_damage/gene_sets.json",
-      "bytes": 2830,
-      "sha256": "d9b5db3449bde0d6bbb4a61ab7e67136ca389b8d7db5f316f46d5794f7911205"
+      "bytes": 4368,
+      "sha256": "b8030b5039b478e4acfd1ee0fe9ff7844409f029592282c9e4cd9214297157fe"
     },
     {
       "path": "direct_damage/prespecified_analysis.json",
@@ -96,8 +101,8 @@
     },
     {
       "path": "direct_damage/primary_plate_summary.csv",
-      "bytes": 933,
-      "sha256": "89580fb7819b7011b7247916bf0965a1ec30689ab7474dd2252c755b0cc9c9a6"
+      "bytes": 928,
+      "sha256": "88eac65cd12fd240b61619690a9273f4bdc15591082d06b2f65250ed19627487"
     },
     {
       "path": "direct_damage/related_pilot_metadata_audit.csv",
@@ -106,13 +111,18 @@
     },
     {
       "path": "direct_damage/source_facts.json",
-      "bytes": 2079,
-      "sha256": "1e0b414499f7b97ed16b1940c5e95a5a6023b9e0ed4e51925a9190859fe5280a"
+      "bytes": 2488,
+      "sha256": "7effc34486a2058c9eb8d3d746f5ef9ce462987b79a67d081e31022887dabd37"
     },
     {
       "path": "direct_damage/source_gate_label_audit.csv",
-      "bytes": 4721,
-      "sha256": "8c3bd7cf20809f8ef0c4fac473bb8ea497ea57d903bbab8c04069cb70e7d44f6"
+      "bytes": 4709,
+      "sha256": "a360e3b138e6f257280cb14fd112d6e95232e04d537aa197d0f63bd96c4e4d71"
+    },
+    {
+      "path": "direct_damage/source_gene_identity_map.json",
+      "bytes": 3474,
+      "sha256": "cb1e8461022424381ee9f7c3df1095925e3f9da97ff35e684d78bc0201745b68"
     },
     {
       "path": "direct_damage/source_manifest.json",
@@ -176,18 +186,18 @@
     },
     {
       "path": "external/analysis_definitions.json",
-      "bytes": 2954,
-      "sha256": "5a03723339c0289545327c69cc9630246dca321fd4216d57252645ca582ed7d4"
+      "bytes": 3568,
+      "sha256": "06628467e791c1e71dcea9e7b66af97c8f7a042cf695ee576cf59e9ebe13520f"
     },
     {
       "path": "external/compendium_module_coverage.csv",
-      "bytes": 3241,
-      "sha256": "7d6cdf94c938a8babff21ee6cd593c1f58636f6aafc5839bf589e65d03bc3802"
+      "bytes": 3259,
+      "sha256": "6a21f0f5a4025df3274e4e62805d80f2d193548bb383ad996c16080d8c3d381e"
     },
     {
       "path": "external/compendium_programme_coverage.csv",
-      "bytes": 5254,
-      "sha256": "72a97dcdc6525c58c106c51d57e357eb86ed7a9d967885090817246de9d486d5"
+      "bytes": 5266,
+      "sha256": "6a60e03f14735868391a28524263382c70e812184e1c8955e3be9d547272c5d1"
     },
     {
       "path": "external/external_control_references.csv",
@@ -207,7 +217,7 @@
     {
       "path": "external/external_scored_cells.csv.gz",
       "bytes": 488229,
-      "sha256": "c45a9272dc0d8fce62eb3a38096d026682041ce2b1758517e3e30967d0b3cd93"
+      "sha256": "fe6baf53ea555dcef47eee528e86b7808dfbfb47516e49e88a88fc7685c31815"
     },
     {
       "path": "external/imaging_associations.csv",
@@ -236,8 +246,8 @@
     },
     {
       "path": "external/resource_inventory.csv",
-      "bytes": 1035,
-      "sha256": "c5e5caf4e2c698d6b438ac7220128e5ad05ade376cbc339f75fa31a696453de4"
+      "bytes": 1034,
+      "sha256": "7b1a39f93d70ccf933b7b7c961208de871218dbb09b4a0758696bcdb3e863616"
     },
     {
       "path": "external/sciplex_dose_effects.csv",
@@ -255,19 +265,24 @@
       "sha256": "18871c1e059db1ad0194d5996a6cb21704873ce9f06b6c119b14bffc825e12b2"
     },
     {
+      "path": "external/source_gene_identity_map.json",
+      "bytes": 89337,
+      "sha256": "30b56d4b8ab9d7790988847e3c9b26c084f69ab088fa4c318fbeb123d3595ffc"
+    },
+    {
       "path": "external/source_url_map.json",
       "bytes": 1614,
       "sha256": "4ec6de416ce84c45b0d5120b45317bae665f6c5cd8f0e2b438e4f2be9bd90c50"
     },
     {
       "path": "forecast/analysis_specification.json",
-      "bytes": 12108,
-      "sha256": "737b5ef7228bb9b9a0de04f62583bc90afe85487adbb6342e798368dd2e5bdba"
+      "bytes": 17907,
+      "sha256": "904c638f23809fae24bf23561ea1c2e7b04076a2bf9a51a0877cd03f51ce6913"
     },
     {
       "path": "forecast/canonical_gene_sets.json",
-      "bytes": 8046,
-      "sha256": "1459c73a9fc529c11a81c4b77fbf2639620e393d45a271607997dbcf7fbb6ce8"
+      "bytes": 23231,
+      "sha256": "0c56935b13a955344fa838cf662690f44dd0f1c7edf78ff4571b2b750ee3f1c7"
     },
     {
       "path": "forecast/cells.csv.gz",
@@ -277,12 +292,12 @@
     {
       "path": "forecast/cohort_pairs.csv",
       "bytes": 34363,
-      "sha256": "93ca3b606fbb6155e1b7809ae7e5bd2e85997464b190e84028c6454fdf02ac96"
+      "sha256": "1e80bca558cb5bb920a60c033e5863df29bbfa9f05f3acdd77c9c0220b7708f0"
     },
     {
       "path": "forecast/fold_references.json",
-      "bytes": 555285,
-      "sha256": "63c0b671677f45c0569825e4b316efaf1007abe7720c7376aed0cade62b07a93"
+      "bytes": 577873,
+      "sha256": "a0700a028e2c162cacb955d409a0406040c9c2c7416fe412c10203b23ed082d8"
     },
     {
       "path": "forecast/frozen_line_folds.csv",
@@ -290,49 +305,54 @@
       "sha256": "bb46b2a2faa598f0b90c51fd72e78e1443bc7afec0b3a220ea56cff4baa89961"
     },
     {
+      "path": "forecast/gene_identity_map.json",
+      "bytes": 5486,
+      "sha256": "f1c7a177d8446013a91294d587e82f808a8f11bd3303006b1bdf7c72a5d28540"
+    },
+    {
       "path": "forecast/gene_sets.json",
-      "bytes": 6261,
-      "sha256": "f64af5c3730c9bcf871963d69d3db7ca0fed8181d81ddee95e39e045d3d1ace3"
+      "bytes": 10796,
+      "sha256": "b30031ba28ccdafb78ef8f6a28867d4fe10e1e8d219f424fc6aaadfff094b815"
     },
     {
       "path": "forecast/inner_tuning.csv",
-      "bytes": 293101,
-      "sha256": "01bc9f5c4c07fe3f992bb18426baffcfae0d0fae9861d90b630ace77d55dc5d9"
+      "bytes": 297729,
+      "sha256": "22223596c6f63d34fca552a5f40bcd226689af4822e99e85390a42fb999b9289"
     },
     {
       "path": "forecast/input_manifest.json",
-      "bytes": 994,
-      "sha256": "eeef030816f512c0f3366494ba2e04bbabc1ca81874a873950638bc79d08de1a"
+      "bytes": 1332,
+      "sha256": "f25313ab9c22f924338b72c7e72344cb833861cfa700c75935e5411dd8dc96bd"
     },
     {
       "path": "forecast/main_model_coefficients.csv",
-      "bytes": 2901,
-      "sha256": "5af63a957f394c986c45a218d778160672775cba283bb7022aaa4fe778011259"
+      "bytes": 2892,
+      "sha256": "9a07aafb55af55a6e037b5322cd937fc29165c5b54ebe2982f3489409966d54a"
     },
     {
       "path": "forecast/model_parameters.json",
-      "bytes": 542938,
-      "sha256": "0f6e8aaf468c78c126407c1f086992272f61c65c65e27595de7e3945786191e5"
+      "bytes": 542884,
+      "sha256": "11725ed30419ad28952e8e9a77be78879b554c4e27dd19d0566de886561de1e0"
     },
     {
       "path": "forecast/module_scores.npz",
-      "bytes": 2280804,
-      "sha256": "d3d2cd6a48903e17aadc931e92e23cab88e3e6f47901560e78cf68d61b80121e"
+      "bytes": 2285726,
+      "sha256": "9f93ce20404328f65a490722c6e290e5333ba3e0204528e0120046e100557fc3"
     },
     {
       "path": "forecast/nested_predictions.csv",
-      "bytes": 2442202,
-      "sha256": "cb5d8c07bd4a8affc720737081d0527276847fd2480765d1f85579587f442110"
+      "bytes": 2462157,
+      "sha256": "7ecf1f14b5d4bc638860dc5b09de2727227d45aa27ec482d83ff9d848f8ba489"
     },
     {
       "path": "forecast/permutation_null.csv",
-      "bytes": 22386,
-      "sha256": "13424f6dadeb768f8a101338de1fd52f2c4c00f492dd2df8a1e36fe952648609"
+      "bytes": 22432,
+      "sha256": "cee0e2a60c36dec59baf777439661a34f67a65e05adcd237df977190ea66987a"
     },
     {
       "path": "forecast/structured_permutation.json",
-      "bytes": 978,
-      "sha256": "31af5c57dc2d76901c96d1c9bd0f915621970ab716f2ca0e9d604322e59caa44"
+      "bytes": 974,
+      "sha256": "d5c7fb23723d0905a359f92040b79da7abd2af7784f157ad22a5643a92aaaa3b"
     },
     {
       "path": "genetic/definitions.json",
@@ -386,28 +406,28 @@
     },
     {
       "path": "source_context/frozen_forecast_PRISM_associations.csv",
-      "bytes": 2539,
-      "sha256": "1a1250cd38fe662bd4acfa3590a339dd36066ae3550b84f33dd60736cd75385a"
+      "bytes": 2583,
+      "sha256": "87eb5e4c6a1c172e7c4c4f2501f67e196ef7971b5a334798f3da4006e4003f80"
     },
     {
       "path": "source_context/frozen_forecast_PRISM_paired_differences.csv",
-      "bytes": 975,
-      "sha256": "d245bc9556f3e8f7a687f7615665c48ffdcc1a7f53d0ea754a37885920048095"
+      "bytes": 969,
+      "sha256": "f2a8d10fc71e83161a830781dfa43d25a06ab8ffaf13c4cdfe2b401d4c4baf17"
     },
     {
       "path": "source_context/frozen_forecasts_with_PRISM.csv",
-      "bytes": 129637,
-      "sha256": "8a5b297799d1fad781673bd60e07e58a16ad8d4898700ec7ce315cd805eb4167"
+      "bytes": 129234,
+      "sha256": "c465fba96868332086d5eb9a681958984d37f0a8156ad444f5073c13380eb1ab"
     },
     {
       "path": "source_context/functional_analysis_definitions.json",
-      "bytes": 1789,
-      "sha256": "af645231bd50104f26ee215cc96ba27204ad987f0f3b790df229995534ddcbab"
+      "bytes": 1455,
+      "sha256": "11f6d665b6b730dca68959bc1df91c0712f54efb6760f7bdd67cb2920e9ae2e7"
     },
     {
       "path": "source_context/idasanutlin_TP53_context.csv",
-      "bytes": 43656,
-      "sha256": "6f7498fdc188bcfaef7f1c9fc37402b1c474708090d027e13cae49f6f5796ebf"
+      "bytes": 43659,
+      "sha256": "568ad1220261c082b73ead582871028a0b16c1e8e9c0d0aba57de3ab4ff39cc6"
     },
     {
       "path": "source_context/idasanutlin_genotype_stratified_associations.csv",
@@ -416,28 +436,28 @@
     },
     {
       "path": "source_context/normal_matched_chemical_cell_line_effects.csv",
-      "bytes": 1142587,
-      "sha256": "a7ca3f940bb29b36fdc10c126bff7021897cf3ff99583cd5f9b703cab4bcb455"
+      "bytes": 1143232,
+      "sha256": "9a9255786f339911586707028ba23563f9b3d715f0e943e4e1aa2a97e94783b5"
     },
     {
       "path": "source_context/normal_matched_chemical_cell_line_summary.csv",
-      "bytes": 21985,
-      "sha256": "8b44faff04affb6ca8ce688baf92d67b7691db7277628ed3a481d0a8dad66a52"
+      "bytes": 21983,
+      "sha256": "7c5b8aba55aee7cdd9ad7348448429f7826f1d88abfb899d2222f2da15c83457"
     },
     {
       "path": "source_context/normal_matched_control_references.csv",
-      "bytes": 1620,
-      "sha256": "bc863568d15d4425b9062fdf08bd54e3c74cc222ab437d5e1635f565893b0fd8"
+      "bytes": 1614,
+      "sha256": "80b3b3baa97f7532f9d92f1378cd3c79668a669ab5f33b781d964b3a98d78ad5"
     },
     {
       "path": "source_context/normal_matched_pairs_with_viability.csv",
-      "bytes": 1785667,
-      "sha256": "d981da70d072933c40508a445b32a26b2319fad9d82dadf07a114ba803dd99f9"
+      "bytes": 1786312,
+      "sha256": "a835fb8da9cea7571770db5b2dbedef0b9394e4728dbb1ebb688cf357455172f"
     },
     {
       "path": "source_context/observed_prism_associations.csv",
-      "bytes": 7105,
-      "sha256": "5f9a5b51a75f6d041effb9fbbe80907317088a479c1a3a72ff4715818107bbb9"
+      "bytes": 7108,
+      "sha256": "a0bc9b1548b216a6c42c4df6d6c2b0e5cacff94586fa1dbe50fcd041db136c2a"
     },
     {
       "path": "source_context/primary_source_facts.json",
@@ -453,6 +473,11 @@
       "path": "source_context/source_classification_manifest.json",
       "bytes": 3885,
       "sha256": "8a988b6e3a58946b86fc89b8126462a3f6baeec9a000167040ed9b2e6cc80c7f"
+    },
+    {
+      "path": "source_context/source_gene_identity_map.json",
+      "bytes": 4967,
+      "sha256": "f085ef54f44adec14ced1669ef6cb54984b54b90da13af1abf004d6e9ac1be92"
     },
     {
       "path": "source_context/source_mapping_verification.csv",
@@ -472,8 +497,8 @@
   ],
   "model_artifact": {
     "path": "final_classifier.joblib",
-    "bytes": 12943955,
-    "sha256": "a8bada3c518b4b653d28ff0d99726ce433ecf9bdd791a338b92684455d22c3ac",
+    "bytes": 12860355,
+    "sha256": "7c61b7ee2c38b4ca0e265dd6e0363238462f0fb143df74d8789f8cd0a66ff1c2",
     "format": "joblib; lossless lzma level3 recompression",
     "purpose": "Full-eligible-data contemporaneous-state classifier, distinct from held-out predictions"
   }

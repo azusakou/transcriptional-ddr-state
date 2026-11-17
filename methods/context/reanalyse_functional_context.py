@@ -31,6 +31,24 @@ FEATURE_FILE = {
     "Idasanutlin": "Idasanutlin_24hr_expt1",
     "Bortezomib": "Bortezomib_24hr_expt1",
 }
+GENE_IDENTITIES = json.loads((HERE / "gene_identity_records.json").read_text())
+
+
+def resolved_markers(markers, genes):
+    available = set(genes)
+    result = {}
+    for g in markers:
+        candidates = sorted(
+            available & set(GENE_IDENTITIES["records"][g]["valid_source_symbols"])
+        )
+        source = (
+            g if g in available else candidates[0] if len(candidates) == 1 else None
+        )
+        if source is not None:
+            result[g] = source
+    if len(set(result.values())) != len(result):
+        raise ValueError("Duplicate resolved marker identity")
+    return result
 
 
 def col(g, k):
@@ -50,7 +68,10 @@ def source_scores(data):
         key = next(k for k in ["gene_symbol", "gene_name", "_index"] if k in f["var"])
         genes = list(col(f["var"], key))
         lookup = {g: i for i, g in enumerate(genes)}
-        wanted = sorted(set(sum(MODULES.values(), [])) & set(genes))
+        resolved = {
+            name: resolved_markers(markers, genes) for name, markers in MODULES.items()
+        }
+        wanted = sorted({s for mapping in resolved.values() for s in mapping.values()})
         x = f["X"]
         counts = np.zeros((len(frame), len(wanted)))
         for j, g in enumerate(wanted):
@@ -62,7 +83,7 @@ def source_scores(data):
         expression = np.log1p(counts * (10000 / np.maximum(total, 1))[:, None])
         for name, markers in MODULES.items():
             frame[name] = expression[
-                :, [wanted.index(g) for g in markers if g in wanted]
+                :, [wanted.index(g) for g in resolved[name].values()]
             ].mean(axis=1)
     keep = (
         (frame.cell_quality == "normal")
@@ -222,9 +243,17 @@ def annotate(pairs):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--data-root", type=Path, required=True)
+    p.add_argument("--data-root", type=Path)
+    p.add_argument("--scored-cells", type=Path)
     args = p.parse_args()
-    cells = source_scores(args.data_root)
+    if args.scored_cells:
+        cells = pd.read_csv(args.scored_cells, dtype={"source_time": str})
+        if cells.source_row.duplicated().any() or not set(MODULES).issubset(cells):
+            raise ValueError("Invalid compact source score table")
+    else:
+        if args.data_root is None:
+            p.error("Provide --data-root or --scored-cells")
+        cells = source_scores(args.data_root)
     cells.to_csv(HERE / "normal_matched_module_cells.csv.gz", index=False)
     refs = []
     both = []
